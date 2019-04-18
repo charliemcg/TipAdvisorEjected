@@ -1,9 +1,13 @@
 export const countries = [
-  // { name: "Afghanistan", flag: "AF", tip: null, currency: "؋", optional: null },
-  // { name: "Albania", flag: "AL", tip: 0.1, currency: "L", optional: false },
-  // { name: "Algeria", flag: "DZ", tip: null, currency: "د.ج", optional: null },
-  // { name: "Andorra", flag: "AD", tip: null, currency: "€", optional: null },
-  // { name: "Angola", flag: "AO", tip: null, currency: "Kz", optional: null },
+  /**
+   * name => the name of the country
+   * flag => the code used by the flag api to retreive a png of the country's flag
+   * tips => an array which holds tip percentages for the country. Can be null. Can be just one item. When more than one item is present a 'type' must be declared for each percentage (eg. taxi, restaurant, etc.)
+   * selectedTipIndex => remains set to 0 when 'tips' is a one item array. This index refers to the selected tip type
+   * currency => the country's currency symbol
+   * optional => indicates if tipping is expected or not
+   */
+
   {
     name: "Afghanistan",
     flag: "AF",
@@ -26,11 +30,11 @@ export const countries = [
   {
     name: "Algeria",
     flag: "DZ",
-    tips: [{ /* type: "Restaurant", */ percentage: 0.1 }],
+    tips: [null],
     selectedTipIndex: 0,
     currency: "د.ج",
-    optional: false
-  }, //The tip type must be removed
+    optional: null
+  },
   {
     name: "Andorra",
     flag: "AD",

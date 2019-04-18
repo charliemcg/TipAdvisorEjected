@@ -6,13 +6,14 @@ import { setSelectedIndex } from "../actions";
 
 class ValidatedTip extends Component {
   render() {
+    const { name, tips, selectedTipIndex, currency } = this.props.country;
     let tipButtons =
-      this.props.country.tips.length <= 1
+      tips.length <= 1
         ? null
-        : this.props.country.tips.map((item, i) => {
+        : tips.map((item, i) => {
             let useThisButtonStyle = styles.tipType;
             let useThisTextStyle = styles.tipButtonText;
-            if (i === this.props.country.selectedTipIndex) {
+            if (i === selectedTipIndex) {
               useThisButtonStyle = styles.selectedTipType;
               useThisTextStyle = styles.selectedTipButtonText;
             }
@@ -35,39 +36,37 @@ class ValidatedTip extends Component {
           <Text style={styles.errorText}>Don't use negative numbers.</Text>
         );
       case null:
-        // if (this.props.country.tips.length === 1) {
-        if (
-          this.props.country.tips.length === 1 &&
-          this.props.country.tips[0] !== null
-        ) {
-          return (
-            <Text style={styles.text}>
-              {this.props.country.currency}
-              {this.props.amount}
-            </Text>
-          );
-        } else if (this.props.country.tips.length > 1) {
+        if (tips.length === 1 && tips[selectedTipIndex] !== null) {
           return (
             <View>
-              {tipButtons}
-              <Text>//////////////////</Text>
-              <Text>
-                Tip:{" "}
-                {this.props.country.tips[this.props.country.selectedTipIndex]
-                  .percentage * 100}
-                %
-              </Text>
+              <Text>Tip: {tips[selectedTipIndex].percentage * 100}%</Text>
               <Text style={styles.text}>
-                {this.props.country.currency}
+                {currency}
                 {this.props.amount}
               </Text>
             </View>
           );
+        } else if (tips.length > 1) {
+          return (
+            <View>
+              {tipButtons}
+              <Text>Tip: {tips[selectedTipIndex].percentage * 100}%</Text>
+              <Text style={styles.text}>
+                {currency}
+                {this.props.amount}
+              </Text>
+            </View>
+          );
+        } else if (
+          name === "Japan" ||
+          name === "South Korea" ||
+          name === "Georgia" ||
+          name === "Iceland"
+        ) {
+          return <Text style={styles.text}>Do not tip in {name}.</Text>;
         } else {
           return (
-            <Text style={styles.text}>
-              You don't need to tip in {this.props.country.name}.
-            </Text>
+            <Text style={styles.text}>You don't need to tip in {name}.</Text>
           );
         }
       default:
