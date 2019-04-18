@@ -10,6 +10,10 @@ import {
 import styles from "../styles/contactStyles";
 import email from "react-native-email";
 import emailImg from "../images/email.png";
+import likeImg from "../images/like.png";
+import appImg from "../images/app.png";
+
+//All icons from Freepik
 
 const EMAIL = "violenthoboenterprises@gmail.com";
 const REVIEW = ""; //Need to get the link for ios and android
@@ -44,7 +48,7 @@ class Contact extends Component {
                   <Text style={styles.emailText}>Leave a review</Text>
                 </View>
                 <View style={styles.emailImgWrapper}>
-                  <Image style={styles.emailImg} source={emailImg} />
+                  <Image style={styles.emailImg} source={likeImg} />
                 </View>
               </View>
             </TouchableHighlight>
@@ -70,7 +74,7 @@ class Contact extends Component {
                   <Text style={styles.emailText}>More apps</Text>
                 </View>
                 <View style={styles.emailImgWrapper}>
-                  <Image style={styles.emailImg} source={emailImg} />
+                  <Image style={styles.emailImg} source={appImg} />
                 </View>
               </View>
             </TouchableHighlight>
