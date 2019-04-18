@@ -16,8 +16,7 @@ const reducer = (
       flag: "AF",
       tips: [null],
       selectedTipIndex: 0,
-      currency: "؋",
-      optional: null
+      currency: "؋"
     },
     amount: 0,
     err: null

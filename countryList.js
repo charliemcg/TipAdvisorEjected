@@ -13,1538 +13,1366 @@ export const countries = [
     flag: "AF",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "؋",
-    optional: null
+    currency: "؋"
   },
   {
     name: "Albania",
     flag: "AL",
-    tips: [
-      { type: "Restaurant", percentage: 0.1 },
-      { type: "Hotel", percentage: 0.05 }
-    ],
+    tips: [{ percentage: 0.1, optional: false }],
     selectedTipIndex: 0,
-    currency: "L",
-    optional: false
+    currency: "L"
   }, //The two tip types are for testing and need to be changed
   {
     name: "Algeria",
     flag: "DZ",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "د.ج",
-    optional: null
+    currency: "د.ج"
   },
   {
     name: "Andorra",
     flag: "AD",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "€",
-    optional: null
+    currency: "€"
   },
   {
     name: "Angola",
     flag: "AO",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Kz",
-    optional: null
+    currency: "Kz"
   },
   {
     name: "Antigua and Barbuda",
     flag: "AG",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   },
   {
     name: "Argentina",
     flag: "AR",
-    tips: [{ percentage: 0.05 }],
+    tips: [{ percentage: 0.05, optional: true }],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: true
+    currency: "$"
   },
   {
     name: "Armenia",
     flag: "AM",
-    tips: [{ percentage: 0.1 }],
+    tips: [{ percentage: 0.1, optional: false }],
     selectedTipIndex: 0,
-    currency: "֏",
-    optional: false
+    currency: "֏"
   },
   {
     name: "Australia",
     flag: "AU",
-    tips: [{ percentage: 0.05 }],
+    tips: [{ percentage: 0.05, optional: true }],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: true
+    currency: "$"
   },
   {
     name: "Austria",
     flag: "AT",
-    tips: [{ percentage: 0.05 }],
+    tips: [
+      { type: "Restaurant", percentage: 0.05, optional: false },
+      { type: "Taxi", percentage: 0.05, optional: true },
+      { type: "Anywhere else", percentage: 0, optional: true }
+    ],
     selectedTipIndex: 0,
-    currency: "€",
-    optional: true
+    currency: "€"
   },
   {
     name: "Azerbaijan",
     flag: "AZ",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "₼",
-    optional: null
+    currency: "₼"
   },
   {
     name: "Bahamas",
     flag: "BS",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   },
   {
     name: "Bahrain",
     flag: "BH",
     tips: [null],
     selectedTipIndex: 0,
-    currency: ".د.ب",
-    optional: null
+    currency: ".د.ب"
   },
   {
     name: "Bangladesh",
     flag: "BD",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "৳",
-    optional: null
+    currency: "৳"
   },
   {
     name: "Barbados",
     flag: "BB",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   },
   {
     name: "Belarus",
     flag: "BY",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Br",
-    optional: null
+    currency: "Br"
   },
   {
     name: "Belgium",
     flag: "BE",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "€",
-    optional: null
+    currency: "€"
   },
   {
     name: "Belize",
     flag: "BZ",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   },
   {
     name: "Benin",
     flag: "BJ",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Fr",
-    optional: null
+    currency: "Fr"
   },
   {
     name: "Bhutan",
     flag: "BT",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Nu",
-    optional: null
+    currency: "Nu"
   },
   {
     name: "Bolivia",
     flag: "BO",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Bs",
-    optional: null
+    currency: "Bs"
   },
   {
     name: "Bosnia and Herzogovina",
     flag: "BA",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "КМ",
-    optional: null
+    currency: "КМ"
   },
   {
     name: "Botswana",
     flag: "BW",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "P",
-    optional: null
+    currency: "P"
   },
   {
     name: "Brazil",
     flag: "BR",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "R$",
-    optional: null
+    currency: "R$"
   },
   {
     name: "Bulgaria",
     flag: "BG",
-    tips: [{ percentage: 0.1 }],
+    tips: [{ percentage: 0.1, optional: true }],
     selectedTipIndex: 0,
-    currency: "лв",
-    optional: true
+    currency: "лв"
   },
   {
     name: "Burkina Faso",
     flag: "BF",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Fr",
-    optional: null
+    currency: "Fr"
   },
   {
     name: "Burundi",
     flag: "BI",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Fr",
-    optional: null
+    currency: "Fr"
   },
   {
     name: "Brunei",
     flag: "BN",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   },
   {
     name: "Cambodia",
     flag: "KH",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "៛",
-    optional: null
+    currency: "៛"
   },
   {
     name: "Cameroon",
     flag: "CM",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Fr",
-    optional: null
+    currency: "Fr"
   },
   {
     name: "Canada",
     flag: "CA",
-    tips: [{ percentage: 0.1 }],
+    tips: [{ percentage: 0.1, optional: false }],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: false
+    currency: "$"
   },
   {
     name: "Cape Verde",
     flag: "CV",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Esc",
-    optional: null
+    currency: "Esc"
   },
   {
     name: "Central African Republic",
     flag: "CF",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Fr",
-    optional: null
+    currency: "Fr"
   },
   {
     name: "Chad",
     flag: "TD",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Fr",
-    optional: null
+    currency: "Fr"
   },
   {
     name: "Chile",
     flag: "CL",
-    tips: [{ percentage: 0.1 }],
+    tips: [{ percentage: 0.1, optional: false }],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: false
+    currency: "$"
   },
   {
     name: "China",
     flag: "CN",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "元",
-    optional: null
+    currency: "元"
   },
   {
     name: "Colombia",
     flag: "CO",
-    tips: [{ percentage: 0.1 }],
+    tips: [{ percentage: 0.1, optional: true }],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: true
+    currency: "$"
   },
   {
     name: "Comoros",
     flag: "KM",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Fr",
-    optional: null
+    currency: "Fr"
   },
   {
     name: "Congo",
     flag: "CG",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Fr",
-    optional: null
+    currency: "Fr"
   },
   {
     name: "D.R. Congo",
     flag: "CD",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Fr",
-    optional: null
+    currency: "Fr"
   },
   {
     name: "Costa Rica",
     flag: "CR",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "₡",
-    optional: null
+    currency: "₡"
   },
   {
     name: "Croatia",
     flag: "HR",
-    tips: [{ percentage: 0.1 }],
+    tips: [
+      { type: "Restaurant", percentage: 0.1, optional: false },
+      { type: "Anywhere else", percentage: 0, optional: false }
+    ],
     selectedTipIndex: 0,
-    currency: "kn",
-    optional: false
+    currency: "kn"
   },
   {
     name: "Cuba",
     flag: "CU",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   },
   {
     name: "Cyprus",
     flag: "CY",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "€",
-    optional: null
+    currency: "€"
   },
   {
     name: "Czechia",
     flag: "CZ",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Kč",
-    optional: null
+    currency: "Kč"
   },
   {
     name: "Denmark",
     flag: "DK",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "kr",
-    optional: null
+    currency: "kr"
   },
   {
     name: "Djibouti",
     flag: "DJ",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Fr",
-    optional: null
+    currency: "Fr"
   },
   {
     name: "Dominica",
     flag: "DM",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   },
   {
     name: "Dominican Republic",
     flag: "DO",
-    tips: [{ percentage: 0.1 }],
+    tips: [{ percentage: 0.1, optional: false }],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: false
+    currency: "$"
   },
   {
     name: "East Timor",
     flag: "TL",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   },
   {
     name: "Ecuador",
     flag: "EC",
-    tips: [{ percentage: 0.05 }],
+    tips: [{ percentage: 0.05, optional: true }],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: true
+    currency: "$"
   },
   {
     name: "Egypt",
     flag: "EG",
-    tips: [{ percentage: 0.1 }],
+    tips: [{ percentage: 0.1, optional: false }],
     selectedTipIndex: 0,
-    currency: "ج.م",
-    optional: false
+    currency: "ج.م"
   },
   {
     name: "El Salvador",
     flag: "SV",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   },
   {
     name: "Equatorial Guinea",
     flag: "GQ",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Fr",
-    optional: null
+    currency: "Fr"
   },
   {
     name: "Eritrea",
     flag: "ER",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Nfk",
-    optional: null
+    currency: "Nfk"
   },
   {
     name: "Estonia",
     flag: "EE",
-    tips: [{ percentage: 0.1 }],
+    tips: [{ percentage: 0.1, optional: true }],
     selectedTipIndex: 0,
-    currency: "€",
-    optional: true
+    currency: "€"
   },
   {
     name: "Eswatini",
     flag: "SZ",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "L",
-    optional: null
+    currency: "L"
   },
   {
     name: "Ethiopia",
     flag: "ET",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Br",
-    optional: null
+    currency: "Br"
   },
   {
     name: "Fiji",
     flag: "FJ",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   },
   {
     name: "Finland",
     flag: "FI",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "€",
-    optional: null
+    currency: "€"
   },
   {
     name: "France",
     flag: "FR",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "€",
-    optional: null
+    currency: "€"
   },
   {
     name: "Gabon",
     flag: "GA",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Fr",
-    optional: null
+    currency: "Fr"
   },
   {
     name: "The Gambia",
     flag: "GM",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "D",
-    optional: null
+    currency: "D"
   },
   {
     name: "Georgia",
     flag: "GE",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "₾",
-    optional: null
+    currency: "₾"
   },
   {
     name: "Germany",
     flag: "DE",
-    tips: [{ percentage: 0.05 }],
+    tips: [
+      { type: "Waiter", percentage: 0.05, optional: true },
+      { type: "Anywhere else", percentage: 0, optional: false }
+    ],
     selectedTipIndex: 0,
-    currency: "€",
-    optional: false
+    currency: "€"
   },
   {
     name: "Ghana",
     flag: "GH",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "₵",
-    optional: null
+    currency: "₵"
   },
   {
     name: "Greece",
     flag: "GR",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "€",
-    optional: null
+    currency: "€"
   },
   {
     name: "Grenada",
     flag: "GD",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   },
   {
     name: "Guatemala",
     flag: "GT",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Q",
-    optional: null
+    currency: "Q"
   },
   {
     name: "Guinea",
     flag: "GN",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Fr",
-    optional: null
+    currency: "Fr"
   },
   {
     name: "Guinea-Bissau",
     flag: "GW",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Fr",
-    optional: null
+    currency: "Fr"
   },
   {
     name: "Guyana",
     flag: "GY",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   },
   {
     name: "Haiti",
     flag: "HT",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "G",
-    optional: null
+    currency: "G"
   },
   {
     name: "Honduras",
     flag: "HN",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "L",
-    optional: null
+    currency: "L"
   },
   {
     name: "Hungary",
     flag: "HU",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Ft",
-    optional: null
+    currency: "Ft"
   },
   {
     name: "Iceland",
     flag: "IS",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "kr",
-    optional: null
+    currency: "kr"
   },
   {
     name: "India",
     flag: "IN",
-    tips: [{ percentage: 0.05 }],
+    tips: [
+      { type: "Cheap street meal", percentage: 0.1, optional: false },
+      { type: "Anything else", percentage: 0.05, optional: true }
+    ],
     selectedTipIndex: 0,
-    currency: "₹",
-    optional: true
+    currency: "₹"
   },
   {
     name: "Indonesia",
     flag: "ID",
-    tips: [{ percentage: 0.1 }],
+    tips: [
+      { type: "Restaurant", percentage: 0.1, optional: false },
+      { type: "Pub", percentage: 0.1, optional: true },
+      { type: "Massage", percentage: 0.1, optional: false },
+      { type: "Taxi", percentage: 0.05, optional: false }
+    ],
     selectedTipIndex: 0,
-    currency: "Rp",
-    optional: false
+    currency: "Rp"
   },
   {
     name: "Italy",
     flag: "IT",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "€",
-    optional: null
+    currency: "€"
   },
   {
     name: "Iran",
     flag: "IR",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "﷼",
-    optional: null
+    currency: "﷼"
   },
   {
     name: "Iraq",
     flag: "IQ",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "ع.د",
-    optional: null
+    currency: "ع.د"
   },
   {
     name: "Ireland",
     flag: "IE",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "€",
-    optional: null
+    currency: "€"
   },
   {
     name: "Israel",
     flag: "IL",
-    tips: [{ percentage: 0.1 }],
+    tips: [{ percentage: 0.1, optional: false }],
     selectedTipIndex: 0,
-    currency: "₪",
-    optional: false
+    currency: "₪"
   },
   {
     name: "Ivory Coast",
     flag: "CI",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Fr",
-    optional: null
+    currency: "Fr"
   },
   {
     name: "Jamaica",
     flag: "JM",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   },
   {
     name: "Japan",
     flag: "JP",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "¥",
-    optional: null
+    currency: "¥"
   },
   {
     name: "Jordan",
     flag: "JO",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "د.ا",
-    optional: null
+    currency: "د.ا"
   },
   {
     name: "Kazakhstan",
     flag: "KZ",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "₸",
-    optional: null
+    currency: "₸"
   },
   {
     name: "Kenya",
     flag: "KE",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Sh",
-    optional: null
+    currency: "Sh"
   },
   {
     name: "Kiribati",
     flag: "KI",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   },
   {
     name: "North Korea",
     flag: "KP",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "₩",
-    optional: null
+    currency: "₩"
   },
   {
     name: "South Korea",
     flag: "KR",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "₩",
-    optional: null
+    currency: "₩"
   },
   {
     name: "Kuwait",
     flag: "KW",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "د.ك",
-    optional: null
+    currency: "د.ك"
   },
   {
     name: "Kyrgyzstan",
     flag: "KG",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "c",
-    optional: null
+    currency: "c"
   },
   {
     name: "Laos",
     flag: "LA",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "₭",
-    optional: null
+    currency: "₭"
   },
   {
     name: "Latvia",
     flag: "LV",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "€",
-    optional: null
+    currency: "€"
   },
   {
     name: "Lebanon",
     flag: "LB",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "ل.ل",
-    optional: null
+    currency: "ل.ل"
   },
   {
     name: "Lesotho",
     flag: "LS",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "L",
-    optional: null
+    currency: "L"
   },
   {
     name: "Liberia",
     flag: "LR",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   },
   {
     name: "Liechtenstein",
     flag: "LI",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Fr",
-    optional: null
+    currency: "Fr"
   },
   {
     name: "Lithuania",
     flag: "LT",
-    tips: [{ percentage: 0.05 }],
+    tips: [{ percentage: 0.05, optional: false }],
     selectedTipIndex: 0,
-    currency: "€",
-    optional: false
+    currency: "€"
   },
   {
     name: "Libya",
     flag: "LY",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "ل.د",
-    optional: null
+    currency: "ل.د"
   },
   {
     name: "Luxembourg",
     flag: "LU",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "€",
-    optional: null
+    currency: "€"
   },
   {
     name: "Macedonia",
     flag: "MK",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "ден",
-    optional: null
+    currency: "ден"
   },
   {
     name: "Madagascar",
     flag: "MG",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Ar",
-    optional: null
+    currency: "Ar"
   },
   {
     name: "Malawi",
     flag: "MW",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "MK",
-    optional: null
+    currency: "MK"
   },
   {
     name: "Malaysia",
     flag: "MY",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "RM",
-    optional: null
+    currency: "RM"
   },
   {
     name: "Maldives",
     flag: "MV",
     tips: [null],
     selectedTipIndex: 0,
-    currency: ".ރ",
-    optional: null
+    currency: ".ރ"
   },
   {
     name: "Mali",
     flag: "ML",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Fr",
-    optional: null
+    currency: "Fr"
   },
   {
     name: "Malta",
     flag: "MT",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "€",
-    optional: null
+    currency: "€"
   },
   {
     name: "Marshall Islands",
     flag: "MH",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   },
   {
     name: "Mauritania",
     flag: "MR",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "UM",
-    optional: null
+    currency: "UM"
   },
   {
     name: "Mauritius",
     flag: "MU",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Rs",
-    optional: null
+    currency: "Rs"
   },
   {
     name: "Mexico",
     flag: "MX",
-    tips: [{ percentage: 0.1 }],
+    tips: [{ percentage: 0.1, optional: false }],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: false
+    currency: "$"
   },
   {
     name: "Moldova",
     flag: "MD",
-    tips: [{ percentage: 0.05 }],
+    tips: [{ percentage: 0.05, optional: true }],
     selectedTipIndex: 0,
-    currency: "L",
-    optional: true
+    currency: "L"
   },
   {
     name: "Monaco",
     flag: "MC",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "€",
-    optional: null
+    currency: "€"
   },
   {
     name: "Mongolia",
     flag: "MN",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "₮",
-    optional: null
+    currency: "₮"
   },
   {
     name: "Montenegro",
     flag: "ME",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "€",
-    optional: null
+    currency: "€"
   },
   {
     name: "Morocco",
     flag: "MA",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "€",
-    optional: null
+    currency: "€"
   },
   {
     name: "Mozambique",
     flag: "MZ",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "MT",
-    optional: null
+    currency: "MT"
   },
   {
     name: "Myanmar",
     flag: "MM",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Ks",
-    optional: null
+    currency: "Ks"
   },
   {
     name: "Namibia",
     flag: "NA",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   },
   {
     name: "Nauru",
     flag: "NR",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   },
   {
     name: "Nepal",
     flag: "NP",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Rs",
-    optional: null
+    currency: "Rs"
   },
   {
     name: "Netherlands",
     flag: "NL",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "€",
-    optional: null
+    currency: "€"
   },
   {
     name: "New Zealand",
     flag: "NZ",
-    tips: [{ percentage: 0.05 }],
+    tips: [{ percentage: 0.05, optional: true }],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: true
+    currency: "$"
   },
   {
     name: "Nicaragua",
     flag: "NI",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "C$",
-    optional: null
+    currency: "C$"
   },
   {
     name: "Niger",
     flag: "NE",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Fr",
-    optional: null
+    currency: "Fr"
   },
   {
     name: "Nigeria",
     flag: "NG",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "₦",
-    optional: null
+    currency: "₦"
   },
   {
     name: "Norway",
     flag: "NO",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "kr",
-    optional: null
+    currency: "kr"
   },
   {
     name: "Oman",
     flag: "OM",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "ر.ع.",
-    optional: null
+    currency: "ر.ع."
   },
   {
     name: "Pakistan",
     flag: "PK",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Rs",
-    optional: null
+    currency: "Rs"
   },
   {
     name: "Palau",
     flag: "PW",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   },
   {
     name: "Panama",
     flag: "PA",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "B/.",
-    optional: null
+    currency: "B/."
   },
   {
     name: "Papua New Guinea",
     flag: "PG",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "K",
-    optional: null
+    currency: "K"
   },
   {
     name: "Paraguay",
     flag: "PY",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "₲",
-    optional: null
+    currency: "₲"
   },
   {
     name: "Peru",
     flag: "PE",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "S/.",
-    optional: null
+    currency: "S/."
   },
   {
     name: "Philippines",
     flag: "PH",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "₱",
-    optional: null
+    currency: "₱"
   },
   {
     name: "Poland",
     flag: "PL",
-    tips: [{ percentage: 0.1 }],
+    tips: [{ percentage: 0.1, optional: false }],
     selectedTipIndex: 0,
-    currency: "zł",
-    optional: false
+    currency: "zł"
   },
   {
     name: "Portugal",
     flag: "PT",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "€",
-    optional: null
+    currency: "€"
   },
   {
     name: "Qatar",
     flag: "QA",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "ر.ق",
-    optional: null
+    currency: "ر.ق"
   },
   {
     name: "Romania",
     flag: "RO",
-    tips: [{ percentage: 0.05 }],
+    tips: [{ percentage: 0.05, optional: false }],
     selectedTipIndex: 0,
-    currency: "lei",
-    optional: false
+    currency: "lei"
   },
   {
     name: "Russia",
     flag: "RU",
-    tips: [{ percentage: 0.05 }],
+    tips: [
+      { type: "Metered taxi", percentage: 0.05, optional: false },
+      { type: "Restaurant", percentage: 0.1, optional: false },
+      { type: "Hotel", percentage: 0.1, optional: false },
+      { type: "Anywhere else", percentage: 0, optional: false }
+    ],
     selectedTipIndex: 0,
-    currency: "₽",
-    optional: false
+    currency: "₽"
   },
   {
     name: "Rwanda",
     flag: "RW",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Fr",
-    optional: null
+    currency: "Fr"
   },
   {
     name: "Saint Kitts and Nevis",
     flag: "KN",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   },
   {
     name: "Saint Lucia",
     flag: "LC",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   },
   {
     name: "Saint Vincent and the Grenadines",
     flag: "VC",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   },
   {
     name: "Samoa",
     flag: "WS",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "T",
-    optional: null
+    currency: "T"
   },
   {
     name: "San Marino",
     flag: "SM",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "€",
-    optional: null
+    currency: "€"
   },
   {
     name: "Sao Tome and Principe",
     flag: "ST",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Db",
-    optional: null
+    currency: "Db"
   },
   {
     name: "Saudi Arabia",
     flag: "SA",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "ر.س",
-    optional: null
+    currency: "ر.س"
   },
   {
     name: "Senegal",
     flag: "SN",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Fr",
-    optional: null
+    currency: "Fr"
   },
   {
     name: "Serbia",
     flag: "RS",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "дин",
-    optional: null
+    currency: "дин"
   },
   {
     name: "Seychelles",
     flag: "SC",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Rs",
-    optional: null
+    currency: "Rs"
   },
   {
     name: "Sierra Leone",
     flag: "SL",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Le",
-    optional: null
+    currency: "Le"
   },
   {
     name: "Singapore",
     flag: "SG",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   },
   {
     name: "Slovakia",
     flag: "SK",
-    tips: [{ percentage: 0.1 }],
+    tips: [{ percentage: 0.1, optional: true }],
     selectedTipIndex: 0,
-    currency: "€",
-    optional: true
+    currency: "€"
   },
   {
     name: "Slovenia",
     flag: "SI",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "€",
-    optional: null
+    currency: "€"
   },
   {
     name: "Solomon Islands",
     flag: "SB",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   },
   {
     name: "Somalia",
     flag: "SO",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Sh",
-    optional: null
+    currency: "Sh"
   },
   {
     name: "South Africa",
     flag: "ZA",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "R",
-    optional: null
+    currency: "R"
   },
   {
     name: "South Sudan",
     flag: "SS",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "	£",
-    optional: null
+    currency: "	£"
   },
   {
     name: "Spain",
     flag: "ES",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "€",
-    optional: null
+    currency: "€"
   },
   {
     name: "Sri Lanka",
     flag: "LK",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Rs",
-    optional: null
+    currency: "Rs"
   },
   {
     name: "Sudan",
     flag: "SD",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "ج.س.",
-    optional: null
+    currency: "ج.س."
   },
   {
     name: "Suriname",
     flag: "SR",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   },
   {
     name: "Sweden",
     flag: "SE",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "kr",
-    optional: null
+    currency: "kr"
   },
   {
     name: "Switzerland",
     flag: "CH",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Fr",
-    optional: null
+    currency: "Fr"
   },
   {
     name: "Syria",
     flag: "SY",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "£",
-    optional: null
+    currency: "£"
   },
   {
     name: "Tajikistan",
     flag: "TJ",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "SM",
-    optional: null
+    currency: "SM"
   },
   {
     name: "Tanzania",
     flag: "TZ",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Sh",
-    optional: null
+    currency: "Sh"
   },
   {
     name: "Thailand",
     flag: "TH",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "฿",
-    optional: null
+    currency: "฿"
   },
   {
     name: "Togo",
     flag: "TG",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Fr",
-    optional: null
+    currency: "Fr"
   },
   {
     name: "Tonga",
     flag: "TO",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "T$",
-    optional: null
+    currency: "T$"
   },
   {
     name: "Trinidad and Tobago",
     flag: "TT",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   },
   {
     name: "Tunisia",
     flag: "TN",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "د.ت",
-    optional: null
+    currency: "د.ت"
   },
   {
     name: "Turkey",
     flag: "TR",
-    tips: [{ percentage: 0.05 }],
+    tips: [{ percentage: 0.05, optional: true }],
     selectedTipIndex: 0,
-    currency: "₺",
-    optional: true
+    currency: "₺"
   },
   {
     name: "Turkmenistan",
     flag: "TM",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "m",
-    optional: null
+    currency: "m"
   },
   {
     name: "Tuvalu",
     flag: "TV",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   },
   {
     name: "Uganda",
     flag: "UG",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Sh",
-    optional: null
+    currency: "Sh"
   },
   {
     name: "Ukraine",
     flag: "UA",
-    tips: [{ percentage: 0.1 }],
+    tips: [{ percentage: 0.1, optional: false }],
     selectedTipIndex: 0,
-    currency: "₴",
-    optional: false
+    currency: "₴"
   },
   {
     name: "United Arab Emirates",
     flag: "AE",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "د.إ",
-    optional: null
+    currency: "د.إ"
   },
   {
     name: "United Kingdom",
     flag: "GB",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "£",
-    optional: null
+    currency: "£"
   },
   {
     name: "United States of America",
     flag: "US",
-    tips: [{ percentage: 0.15 }],
+    tips: [{ percentage: 0.15, optional: false }],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: false
+    currency: "$"
   },
   {
     name: "Uruguay",
     flag: "UY",
-    tips: [{ percentage: 0.1 }],
+    tips: [{ percentage: 0.1, optional: true }],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: true
+    currency: "$"
   },
   {
     name: "Uzbekistan",
     flag: "UZ",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "so'm",
-    optional: null
+    currency: "so'm"
   },
   {
     name: "Vanuatu",
     flag: "VU",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Vt",
-    optional: null
+    currency: "Vt"
   },
   {
     name: "Venezuela",
     flag: "VE",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "Bs.S",
-    optional: null
+    currency: "Bs.S"
   },
   {
     name: "Vietnam",
     flag: "VN",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "₫",
-    optional: null
+    currency: "₫"
   },
   {
     name: "Yemen",
     flag: "YE",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "﷼",
-    optional: null
+    currency: "﷼"
   },
   {
     name: "Zambia",
     flag: "ZM",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "ZK",
-    optional: null
+    currency: "ZK"
   },
   {
     name: "Zimbabwe",
     flag: "ZW",
     tips: [null],
     selectedTipIndex: 0,
-    currency: "$",
-    optional: null
+    currency: "$"
   }
 ];

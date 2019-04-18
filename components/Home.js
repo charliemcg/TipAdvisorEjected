@@ -7,7 +7,11 @@ import { calculateTip, setError } from "../actions";
 import ValidatedTip from "./ValidatedTip";
 
 function Optional(value) {
-  return value.country.optional ? <Text>Tipping optional</Text> : null;
+  return value.country.tips[value.country.selectedTipIndex] ===
+    null ? null : value.country.tips[value.country.selectedTipIndex]
+      .optional ? (
+    <Text>Tipping optional</Text>
+  ) : null;
 }
 
 class Home extends Component {
