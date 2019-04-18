@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Text, View, Image, TextInput, Alert } from "react-native";
-import styles from "../appStyles";
+import styles from "../styles/homeStyles";
 import { connect } from "react-redux";
 import Picker from "./Picker";
 import { calculateTip, setError } from "../actions";
@@ -50,6 +50,7 @@ class Home extends Component {
       "https://www.countryflags.io/" +
       this.props.country.flag +
       "/shiny/64.png";
+
     return (
       <View style={styles.container}>
         <View style={styles.titleWrapper}>

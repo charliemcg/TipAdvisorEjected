@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { changeCountry } from "../actions";
 import { countries } from "../countryList";
-// import { Dropdown } from "react-native-material-dropdown";
 import { Picker, Alert, View, Text } from "react-native";
-import styles from "../appStyles";
+import styles from "../styles/pickerStyles";
 
 class CountryPicker extends Component {
   handleChange = event => {

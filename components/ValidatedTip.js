@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Text, Alert, Button, View, TouchableHighlight } from "react-native";
-import styles from "../appStyles";
+import styles from "../styles/validatedTipStyles";
 import { setSelectedIndex } from "../actions";
 
 class ValidatedTip extends Component {

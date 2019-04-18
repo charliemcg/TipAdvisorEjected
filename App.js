@@ -3,6 +3,7 @@ import { Provider } from "react-redux";
 import { Platform, StatusBar, View, Text } from "react-native";
 import Home from "./components/Home";
 import About from "./components/About";
+import Contact from "./components/Contact";
 import store from "./store";
 import { createBottomTabNavigator, createAppContainer } from "react-navigation";
 
@@ -24,6 +25,9 @@ const Navigator = createBottomTabNavigator(
     },
     About: {
       screen: About
+    },
+    Contact: {
+      screen: Contact
     }
   },
   {
