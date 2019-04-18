@@ -44,7 +44,6 @@ class Home extends Component {
           maxLength={8}
         />
       );
-    // Alert.alert(`Length ${this.props.country.tips[0]}`);
 
     //use flat instead of shiny for ios
     const flagImgUrl =
@@ -68,14 +67,6 @@ class Home extends Component {
           </View>
         </View>
         <View style={styles.tipRow}>
-          {/* <TextInput
-            style={styles.input}
-            keyboardType="numeric"
-            onChangeText={this.handleChange}
-            placeholder="     amount"
-            placeholderTextColor="#000"
-            maxLength={8}
-          /> */}
           {getTextInput}
           <View style={styles.description}>
             <Optional country={this.props.country} />
