@@ -1,5 +1,6 @@
 import { countries } from "../countryList";
 import { Alert } from "react-native";
+import DeviceInfo from "react-native-device-info";
 
 function findCountry(payload) {
   for (let i = 0; i < countries.length; i++) {
@@ -9,8 +10,24 @@ function findCountry(payload) {
   }
 }
 
-const reducer = (
-  state = {
+function getCountryFromDevice() {
+  const countryCode = DeviceInfo.getDeviceCountry();
+  for (let i = 0; i < countries.length; i++) {
+    if (countryCode === countries[i].flag) {
+      return {
+        country: {
+          name: countries[i].name,
+          flag: countryCode,
+          tips: countries[i].tips,
+          selectedTipIndex: countries[i].selectedTipIndex,
+          currency: countries[i].currency
+        },
+        amount: 0,
+        err: null
+      };
+    }
+  }
+  return {
     country: {
       name: "Afghanistan",
       flag: "AF",
@@ -20,9 +37,10 @@ const reducer = (
     },
     amount: 0,
     err: null
-  },
-  action
-) => {
+  };
+}
+
+const reducer = (state = getCountryFromDevice(), action) => {
   switch (action.type) {
     case "CHANGE_COUNTRY":
       let newCountry = findCountry(action.payload);

@@ -39,12 +39,11 @@ export default {
     borderWidth: 1,
     borderRadius: 20,
     borderColor: "#ddd",
-    elevation: 10
+    elevation: 5
   },
   touchWrapper: {
     flexDirection: "row",
     justifyContent: "space-around",
-    // backgroundColor: "#0ff",
     height: "100%"
   },
   textWrapper: {

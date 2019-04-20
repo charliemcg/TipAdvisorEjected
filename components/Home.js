@@ -6,6 +6,7 @@ import Picker from "./Picker";
 import { calculateTip, setError } from "../actions";
 import ValidatedTip from "./ValidatedTip";
 import mapImg from "../images/mapEdited.jpg";
+import DeviceInfo from "react-native-device-info";
 
 class Home extends Component {
   handleChange = event => {
