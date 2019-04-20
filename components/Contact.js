@@ -45,47 +45,47 @@ class Contact extends Component {
           <Image source={mapImg} style={styles.map} />
         </View>
         <View style={styles.contactWrapper}>
-          <View style={styles.email}>
+          <View style={styles.touchableWrapper}>
             <TouchableHighlight onPress={() => this.handleReview()}>
-              <View style={styles.emailTouchWrapper}>
-                <View style={styles.emailTextWrapper}>
-                  <Text style={styles.emailText}>Leave a review</Text>
+              <View style={styles.touchWrapper}>
+                <View style={styles.textWrapper}>
+                  <Text style={styles.text}>Leave a review</Text>
                 </View>
-                <View style={styles.emailImgWrapper}>
-                  <Image style={styles.emailImg} source={likeImg} />
+                <View style={styles.imgWrapper}>
+                  <Image style={styles.img} source={likeImg} />
                 </View>
               </View>
             </TouchableHighlight>
           </View>
 
-          <View style={styles.email}>
+          <View style={styles.touchableWrapper}>
             <TouchableHighlight onPress={() => this.handleEmail()}>
-              <View style={styles.emailTouchWrapper}>
-                <View style={styles.emailTextWrapper}>
-                  <Text style={styles.emailText}>Email</Text>
+              <View style={styles.touchWrapper}>
+                <View style={styles.textWrapper}>
+                  <Text style={styles.text}>Email</Text>
                 </View>
-                <View style={styles.emailImgWrapper}>
-                  <Image style={styles.emailImg} source={emailImg} />
+                <View style={styles.imgWrapper}>
+                  <Image style={styles.img} source={emailImg} />
                 </View>
               </View>
             </TouchableHighlight>
           </View>
 
-          <View style={styles.email}>
+          <View style={styles.touchableWrapper}>
             <TouchableHighlight onPress={() => this.handleMoreApps()}>
-              <View style={styles.emailTouchWrapper}>
-                <View style={styles.emailTextWrapper}>
-                  <Text style={styles.emailText}>More apps</Text>
+              <View style={styles.touchWrapper}>
+                <View style={styles.textWrapper}>
+                  <Text style={styles.text}>More apps</Text>
                 </View>
-                <View style={styles.emailImgWrapper}>
-                  <Image style={styles.emailImg} source={appImg} />
+                <View style={styles.imgWrapper}>
+                  <Image style={styles.img} source={appImg} />
                 </View>
               </View>
             </TouchableHighlight>
           </View>
         </View>
         <View style={styles.credit}>
-          <Text style={styles.text}>
+          <Text style={styles.creditText}>
             Violent Hobo Enterprises - {new Date().getFullYear()}
           </Text>
         </View>

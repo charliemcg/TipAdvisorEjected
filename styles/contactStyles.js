@@ -24,7 +24,7 @@ export default {
     padding: 20,
     elevation: 10
   },
-  email: {
+  touchableWrapper: {
     // height: "15%",
     flex: 1,
     marginTop: 30,
@@ -36,22 +36,26 @@ export default {
     justifyContent: "center",
     elevation: 10
   },
-  emailTouchWrapper: {
+  touchWrapper: {
     // height: "100%",
     flexDirection: "row",
     justifyContent: "space-around"
   },
-  emailTextWrapper: {
-    justifyContent: "center"
+  textWrapper: {
+    justifyContent: "center",
+    width: "60%",
+    alignItems: "center"
   },
-  emailText: {
+  text: {
     color: "#111",
     fontSize: 20
   },
-  emailImgWrapper: {
-    justifyContent: "center"
+  imgWrapper: {
+    justifyContent: "center",
+    width: "40%",
+    alignItems: "center"
   },
-  emailImg: {
+  img: {
     width: 50,
     height: 50
   },
@@ -62,7 +66,7 @@ export default {
     justifyContent: "center",
     width: "100%"
   },
-  text: {
+  creditText: {
     color: "#111",
     fontSize: 15,
     textAlign: "center"

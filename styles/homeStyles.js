@@ -5,7 +5,9 @@ export default {
     backgroundColor: "#eee"
   },
   titleWrapper: {
-    height: 150
+    height: 150,
+    justifyContent: "space-between",
+    alignItems: "center"
   },
   title: {
     padding: 15,
@@ -23,6 +25,7 @@ export default {
   countryRow: {
     position: "absolute",
     flexDirection: "row",
+    // backgroundColor: "rgba(255, 255, 255, 0.8)",
     backgroundColor: "#fff",
     alignItems: "center",
     paddingRight: 20,
