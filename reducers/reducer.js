@@ -12,11 +12,24 @@ function findCountry(payload) {
 const reducer = (
   state = {
     country: {
-      name: "Afghanistan",
-      flag: "AF",
-      tips: [null],
+      // name: "Afghanistan",
+      // flag: "AF",
+      // tips: [null],
+      // selectedTipIndex: 0,
+      // currency: "؋"
+      // name: "Albania",
+      // flag: "AL",
+      // tips: [{ percentage: 0.1, optional: false }],
+      // selectedTipIndex: 0,
+      // currency: "L"
+      name: "Croatia",
+      flag: "HR",
+      tips: [
+        { type: "Restaurant", percentage: 0.1, optional: false },
+        { type: "Anywhere else", percentage: 0, optional: false }
+      ],
       selectedTipIndex: 0,
-      currency: "؋"
+      currency: "kn"
     },
     amount: 0,
     err: null

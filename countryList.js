@@ -21,7 +21,7 @@ export const countries = [
     tips: [{ percentage: 0.1, optional: false }],
     selectedTipIndex: 0,
     currency: "L"
-  }, //The two tip types are for testing and need to be changed
+  },
   {
     name: "Algeria",
     flag: "DZ",

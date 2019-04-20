@@ -4,9 +4,16 @@ import { Text, Alert, Button, View, TouchableHighlight } from "react-native";
 import styles from "../styles/validatedTipStyles";
 import { setSelectedIndex } from "../actions";
 
+function IsOptional(value) {
+  return value.country.tips[value.country.selectedTipIndex].optional ? (
+    <Text style={styles.optional}>Tipping optional</Text>
+  ) : null;
+}
+
 class ValidatedTip extends Component {
   render() {
     const { name, tips, selectedTipIndex, currency } = this.props.country;
+
     let tipButtons =
       tips.length <= 1
         ? null
@@ -39,22 +46,34 @@ class ValidatedTip extends Component {
         if (tips.length === 1 && tips[selectedTipIndex] !== null) {
           return (
             <View>
-              <Text>Tip: {tips[selectedTipIndex].percentage * 100}%</Text>
-              <Text style={styles.text}>
-                {currency}
-                {this.props.amount}
-              </Text>
+              <View style={styles.tipExtras}>
+                <Text style={styles.percentage}>
+                  Tip: {tips[selectedTipIndex].percentage * 100}%
+                </Text>
+                <IsOptional country={this.props.country} />
+              </View>
+              <View style={styles.tipWrapper}>
+                <Text style={styles.text}>
+                  {currency}
+                  {this.props.amount}
+                </Text>
+              </View>
             </View>
           );
         } else if (tips.length > 1) {
           return (
             <View>
-              {tipButtons}
-              <Text>Tip: {tips[selectedTipIndex].percentage * 100}%</Text>
-              <Text style={styles.text}>
-                {currency}
-                {this.props.amount}
-              </Text>
+              <View style={styles.tipButtonWrapper}>{tipButtons}</View>
+              <View style={styles.tipExtras}>
+                <Text>Tip: {tips[selectedTipIndex].percentage * 100}%</Text>
+                <IsOptional country={this.props.country} />
+              </View>
+              <View style={styles.tipWrapper}>
+                <Text style={styles.text}>
+                  {currency}
+                  {this.props.amount}
+                </Text>
+              </View>
             </View>
           );
         } else if (

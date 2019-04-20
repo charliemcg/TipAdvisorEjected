@@ -23,6 +23,7 @@ class CountryPicker extends Component {
       <Picker
         selectedValue={this.props.country.name}
         style={styles.picker}
+        textStyle={{ fontSize: 40 }}
         onValueChange={value => this.handleChange(value)}
       >
         {pickerItems}

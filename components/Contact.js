@@ -40,7 +40,7 @@ class Contact extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.contactWrapper}>
+        <View /*style={styles.contactWrapper}*/>
           <View style={styles.email}>
             <TouchableHighlight onPress={() => this.handleReview()}>
               <View style={styles.emailTouchWrapper}>

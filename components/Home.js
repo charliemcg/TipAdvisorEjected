@@ -5,14 +5,7 @@ import { connect } from "react-redux";
 import Picker from "./Picker";
 import { calculateTip, setError } from "../actions";
 import ValidatedTip from "./ValidatedTip";
-
-function Optional(value) {
-  return value.country.tips[value.country.selectedTipIndex] ===
-    null ? null : value.country.tips[value.country.selectedTipIndex]
-      .optional ? (
-    <Text>Tipping optional</Text>
-  ) : null;
-}
+import mapImg from "../images/mapEdited.jpg";
 
 class Home extends Component {
   handleChange = event => {
@@ -39,7 +32,7 @@ class Home extends Component {
           style={styles.input}
           keyboardType="numeric"
           onChangeText={this.handleChange}
-          placeholder="     amount"
+          placeholder="amount"
           placeholderTextColor="#000"
           maxLength={8}
         />
@@ -54,8 +47,10 @@ class Home extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.titleWrapper}>
+          <Image source={mapImg} style={styles.map} />
           <Text style={styles.title}>Tip Advisor</Text>
         </View>
+        <View style={styles.buffer} />
         <View style={styles.countryRow}>
           <View style={styles.flag}>
             <Image
@@ -70,7 +65,6 @@ class Home extends Component {
         <View style={styles.tipRow}>
           {getTextInput}
           <View style={styles.description}>
-            <Optional country={this.props.country} />
             <ValidatedTip />
           </View>
         </View>

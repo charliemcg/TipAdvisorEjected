@@ -1,9 +1,8 @@
 export default {
   picker: {
     width: "80%",
-    height: "50%",
-    backgroundColor: "#98ee99",
-    justifyContent: "center",
-    alignItems: "center"
+    height: "100%",
+    backgroundColor: "#fff",
+    padding: 20
   }
 };

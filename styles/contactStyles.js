@@ -2,15 +2,16 @@ export default {
   container: {
     width: "100%",
     height: "100%",
-    backgroundColor: "#64b5f6"
+    // backgroundColor: "#64b5f6",
+    backgroundColor: "#eee",
+    justifyContent: "center",
+    alignItems: "center"
   },
   email: {
     height: "15%",
     marginTop: 30,
     marginBottom: 10,
     borderStyle: "solid",
-    borderColor: "#ddd",
-    borderWidth: 1,
     borderColor: "#aaa",
     borderWidth: 1,
     backgroundColor: "#666"
@@ -41,7 +42,7 @@ export default {
     justifyContent: "center"
   },
   text: {
-    color: "#ddd",
+    color: "#111",
     fontSize: 15,
     textAlign: "center"
   }
