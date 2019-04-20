@@ -25,7 +25,6 @@ export default {
     elevation: 10
   },
   touchableWrapper: {
-    // height: "15%",
     flex: 1,
     marginTop: 30,
     marginBottom: 10,
@@ -37,7 +36,6 @@ export default {
     elevation: 10
   },
   touchWrapper: {
-    // height: "100%",
     flexDirection: "row",
     justifyContent: "space-around"
   },
@@ -62,7 +60,6 @@ export default {
   credit: {
     height: "10%",
     marginTop: 40,
-    // marginBottom: 10,
     justifyContent: "center",
     width: "100%"
   },

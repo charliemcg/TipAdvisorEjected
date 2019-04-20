@@ -25,7 +25,6 @@ export default {
   countryRow: {
     position: "absolute",
     flexDirection: "row",
-    // backgroundColor: "rgba(255, 255, 255, 0.8)",
     backgroundColor: "#fff",
     alignItems: "center",
     paddingRight: 20,
@@ -69,7 +68,6 @@ export default {
   },
   description: {
     flex: 5,
-    backgroundColor: "white",
     marginTop: 10
   },
   errorText: {

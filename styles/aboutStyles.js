@@ -16,7 +16,6 @@ export default {
   descriptionWrapper: {
     position: "absolute",
     backgroundColor: "#fff",
-    // backgroundColor: "rgba(255, 255, 255, 0.9)",
     height: "100%",
     marginLeft: 20,
     marginRight: 20,

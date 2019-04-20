@@ -23,6 +23,10 @@ export default {
   tipWrapper: {
     height: "100%"
   },
+  textWrapper: {
+    flex: 1,
+    marginTop: 100
+  },
   text: {
     flex: 1,
     fontSize: 30,

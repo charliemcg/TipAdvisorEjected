@@ -1,6 +1,13 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Text, Alert, Button, View, TouchableHighlight } from "react-native";
+import {
+  Text,
+  Alert,
+  Button,
+  View,
+  TouchableHighlight,
+  ScrollView
+} from "react-native";
 import styles from "../styles/validatedTipStyles";
 import { setSelectedIndex } from "../actions";
 
@@ -63,9 +70,13 @@ class ValidatedTip extends Component {
         } else if (tips.length > 1) {
           return (
             <View>
-              <View style={styles.tipButtonWrapper}>{tipButtons}</View>
+              <View style={styles.tipButtonWrapper}>
+                <ScrollView horizontal={true}>{tipButtons}</ScrollView>
+              </View>
               <View style={styles.tipExtras}>
-                <Text>Tip: {tips[selectedTipIndex].percentage * 100}%</Text>
+                <Text style={styles.percentage}>
+                  Tip: {tips[selectedTipIndex].percentage * 100}%
+                </Text>
                 <IsOptional country={this.props.country} />
               </View>
               <View style={styles.tipWrapper}>
@@ -82,10 +93,16 @@ class ValidatedTip extends Component {
           name === "Georgia" ||
           name === "Iceland"
         ) {
-          return <Text style={styles.text}>Do not tip in {name}.</Text>;
+          return (
+            <View style={styles.textWrapper}>
+              <Text style={styles.text}>Do not tip in {name}.</Text>
+            </View>
+          );
         } else {
           return (
-            <Text style={styles.text}>You don't need to tip in {name}.</Text>
+            <View style={styles.textWrapper}>
+              <Text style={styles.text}>You don't need to tip in {name}.</Text>
+            </View>
           );
         }
       default:

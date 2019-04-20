@@ -27,7 +27,7 @@ class Home extends Component {
   render() {
     const getTextInput =
       this.props.country.tips[this.props.country.selectedTipIndex] ===
-      null ? null : (
+      null ? null : ( // <View style={styles.input} />
         <TextInput
           style={styles.input}
           keyboardType="numeric"
@@ -36,6 +36,12 @@ class Home extends Component {
           placeholderTextColor="#000"
           maxLength={8}
         />
+      );
+
+    const getBuffer =
+      this.props.country.tips[this.props.country.selectedTipIndex] ===
+      null ? null : (
+        <View style={styles.buffer} />
       );
 
     //use flat instead of shiny for ios
@@ -50,7 +56,8 @@ class Home extends Component {
           <Image source={mapImg} style={styles.map} />
           <Text style={styles.title}>Tip Advisor</Text>
         </View>
-        <View style={styles.buffer} />
+        {/* <View style={styles.buffer} /> */}
+        {getBuffer}
         <View style={styles.countryRow}>
           <View style={styles.flag}>
             <Image

@@ -77,7 +77,7 @@ export const countries = [
     tips: [
       { type: "Restaurant", percentage: 0.05, optional: false },
       { type: "Taxi", percentage: 0.05, optional: true },
-      { type: "Anywhere else", percentage: 0, optional: true }
+      { type: "Anywhere else", percentage: 0, optional: false }
     ],
     selectedTipIndex: 0,
     currency: "€"
