@@ -32,7 +32,9 @@ export default {
     fontSize: 30,
     textAlign: "center",
     color: "#111",
-    paddingTop: 40
+    paddingTop: 40,
+    marginLeft: 20,
+    marginRight: 20
   },
   tipButtonWrapper: {
     flexDirection: "row",
@@ -42,19 +44,26 @@ export default {
     borderWidth: 1,
     borderStyle: "solid",
     borderColor: "#338a3e",
-    margin: 10
+    backgroundColor: "#fff",
+    margin: 10,
+    borderWidth: 1,
+    borderRadius: 20
   },
   selectedTipType: {
     borderWidth: 1,
     borderStyle: "solid",
     borderColor: "#338a3e",
-    margin: 10
+    backgroundColor: "#338a3e",
+    margin: 10,
+    borderWidth: 1,
+    borderRadius: 20
+    // borderColor: "#ddd"
   },
   tipButtonText: {
     fontSize: 20,
     color: "#338a3e",
     textAlign: "center",
-    backgroundColor: "#fff",
+    // backgroundColor: "#fff",
     paddingLeft: 10,
     paddingRight: 10
   },
@@ -62,7 +71,7 @@ export default {
     fontSize: 20,
     color: "#fff",
     textAlign: "center",
-    backgroundColor: "#338a3e",
+    // backgroundColor: "#338a3e",
     paddingLeft: 10,
     paddingRight: 10
   }

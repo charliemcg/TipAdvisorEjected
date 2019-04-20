@@ -27,7 +27,7 @@ class Home extends Component {
   render() {
     const getTextInput =
       this.props.country.tips[this.props.country.selectedTipIndex] ===
-      null ? null : ( // <View style={styles.input} />
+      null ? null : (
         <TextInput
           style={styles.input}
           keyboardType="numeric"
@@ -56,7 +56,6 @@ class Home extends Component {
           <Image source={mapImg} style={styles.map} />
           <Text style={styles.title}>Tip Advisor</Text>
         </View>
-        {/* <View style={styles.buffer} /> */}
         {getBuffer}
         <View style={styles.countryRow}>
           <View style={styles.flag}>

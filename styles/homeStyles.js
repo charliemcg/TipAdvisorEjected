@@ -33,9 +33,9 @@ export default {
     marginTop: 100,
     height: 100,
     borderWidth: 1,
-    borderRadius: 2,
+    borderRadius: 20,
     borderColor: "#ddd",
-    borderBottomWidth: 0,
+    // borderBottomWidth: 0,
     elevation: 20
   },
   flag: {

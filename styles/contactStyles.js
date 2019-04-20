@@ -22,6 +22,9 @@ export default {
     marginRight: 20,
     marginTop: 30,
     padding: 20,
+    borderWidth: 1,
+    borderRadius: 20,
+    borderColor: "#ddd",
     elevation: 10
   },
   touchableWrapper: {
@@ -33,11 +36,15 @@ export default {
     borderWidth: 1,
     backgroundColor: "#fff",
     justifyContent: "center",
+    borderWidth: 1,
+    borderRadius: 20,
+    borderColor: "#ddd",
     elevation: 10
   },
   touchWrapper: {
     flexDirection: "row",
-    justifyContent: "space-around"
+    justifyContent: "space-around",
+    backgroundColor: "#0ff"
   },
   textWrapper: {
     justifyContent: "center",

@@ -1,13 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import {
-  Text,
-  Alert,
-  Button,
-  View,
-  TouchableHighlight,
-  ScrollView
-} from "react-native";
+import { Text, View, TouchableHighlight, ScrollView } from "react-native";
 import styles from "../styles/validatedTipStyles";
 import { setSelectedIndex } from "../actions";
 
