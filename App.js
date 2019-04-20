@@ -24,33 +24,39 @@ const Navigator = createBottomTabNavigator(
     Home: {
       screen: Home,
       navigationOptions: {
-        tabBarIcon: () => <Icon name="home-outline" color={"#000"} size={20} />
+        tabBarIcon: ({ tintColor }) => (
+          <Icon name="home-outline" color={tintColor} size={20} />
+        )
       }
     },
     About: {
       screen: About,
       navigationOptions: {
-        tabBarIcon: () => (
-          <Icon name="information-outline" color={"#000"} size={20} />
+        tabBarIcon: ({ tintColor }) => (
+          <Icon name="information-outline" color={tintColor} size={20} />
         )
       }
     },
     Contact: {
       screen: Contact,
       navigationOptions: {
-        tabBarIcon: () => <Icon name="email-outline" color={"#000"} size={20} />
+        tabBarIcon: ({ tintColor }) => (
+          <Icon name="email-outline" color={tintColor} size={20} />
+        )
       }
     }
   },
   {
     tabBarOptions: {
       activeTintColor: "#338a3e",
+      // activeIconColor: "#338a3e",
       labelStyle: {
         fontSize: 15
       },
       style: {
         backgroundColor: "#fff"
-        // tabStyle: {}
+
+        // tabStyle: { buttonColor: "#0ff" }
       }
     }
   }

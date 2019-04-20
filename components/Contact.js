@@ -13,6 +13,7 @@ import emailImg from "../images/email.png";
 import likeImg from "../images/like.png";
 import appImg from "../images/app.png";
 import mapImg from "../images/mapEdited.jpg";
+import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 //All icons from Freepik
 
@@ -52,7 +53,13 @@ class Contact extends Component {
                   <Text style={styles.text}>Leave a review</Text>
                 </View>
                 <View style={styles.imgWrapper}>
-                  <Image style={styles.img} source={likeImg} />
+                  {/* <Image style={styles.img} source={likeImg} /> */}
+                  <Icon
+                    // style={styles.img}
+                    name="star-face"
+                    color={"#000"}
+                    size={50}
+                  />
                 </View>
               </View>
             </TouchableHighlight>
@@ -65,7 +72,8 @@ class Contact extends Component {
                   <Text style={styles.text}>Email</Text>
                 </View>
                 <View style={styles.imgWrapper}>
-                  <Image style={styles.img} source={emailImg} />
+                  {/* <Image style={styles.img} source={emailImg} /> */}
+                  <Icon name="email-outline" color={"#000"} size={50} />
                 </View>
               </View>
             </TouchableHighlight>
@@ -78,7 +86,8 @@ class Contact extends Component {
                   <Text style={styles.text}>More apps</Text>
                 </View>
                 <View style={styles.imgWrapper}>
-                  <Image style={styles.img} source={appImg} />
+                  {/* <Image style={styles.img} source={appImg} /> */}
+                  <Icon name="cellphone-arrow-down" color={"#000"} size={50} />
                 </View>
               </View>
             </TouchableHighlight>

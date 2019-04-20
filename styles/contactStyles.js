@@ -44,7 +44,8 @@ export default {
   touchWrapper: {
     flexDirection: "row",
     justifyContent: "space-around",
-    backgroundColor: "#0ff"
+    // backgroundColor: "#0ff",
+    height: "100%"
   },
   textWrapper: {
     justifyContent: "center",
