@@ -1,7 +1,12 @@
 export default {
   errorText: {
     color: "#f00",
-    fontSize: 25
+    fontSize: 25,
+    flex: 1,
+    fontSize: 37,
+    textAlign: "center",
+    marginLeft: 20,
+    marginRight: 20
   },
   tipExtras: {
     flexDirection: "row",
@@ -29,7 +34,7 @@ export default {
   },
   text: {
     flex: 1,
-    fontSize: 30,
+    fontSize: 37,
     textAlign: "center",
     color: "#111",
     paddingTop: 40,
@@ -57,13 +62,11 @@ export default {
     margin: 10,
     borderWidth: 1,
     borderRadius: 20
-    // borderColor: "#ddd"
   },
   tipButtonText: {
     fontSize: 20,
     color: "#338a3e",
     textAlign: "center",
-    // backgroundColor: "#fff",
     paddingLeft: 10,
     paddingRight: 10
   },
@@ -71,7 +74,6 @@ export default {
     fontSize: 20,
     color: "#fff",
     textAlign: "center",
-    // backgroundColor: "#338a3e",
     paddingLeft: 10,
     paddingRight: 10
   }

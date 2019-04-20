@@ -37,10 +37,16 @@ class ValidatedTip extends Component {
           });
     switch (this.props.err) {
       case "NOT_A_NUMBER":
-        return <Text style={styles.errorText}>Only use numbers.</Text>;
+        return (
+          <View style={styles.textWrapper}>
+            <Text style={styles.errorText}>Only use numbers.</Text>
+          </View>
+        );
       case "NEGATIVE":
         return (
-          <Text style={styles.errorText}>Don't use negative numbers.</Text>
+          <View style={styles.textWrapper}>
+            <Text style={styles.errorText}>Don't use negative numbers.</Text>
+          </View>
         );
       case null:
         if (tips.length === 1 && tips[selectedTipIndex] !== null) {

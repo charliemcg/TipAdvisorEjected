@@ -9,7 +9,12 @@ import mapImg from "../images/mapEdited.jpg";
 import DeviceInfo from "react-native-device-info";
 
 class Home extends Component {
+  state = {
+    inputValue: null
+  };
+
   handleChange = event => {
+    this.setState({ inputValue: event });
     if (this.props.country.tips[this.props.country.selectedTipIndex] !== null) {
       if (isNaN(event)) {
         this.props.setError("NOT_A_NUMBER");
@@ -33,9 +38,34 @@ class Home extends Component {
           style={styles.input}
           keyboardType="numeric"
           onChangeText={this.handleChange}
-          placeholder="amount"
-          placeholderTextColor="#000"
+          placeholder="amount..."
+          placeholderTextColor="#666"
           maxLength={8}
+          onBlur={() => {
+            if (!isNaN(this.state.inputValue) && this.state.inputValue > 0) {
+              this.setState({
+                inputValue: `${this.props.country.currency}${
+                  this.state.inputValue
+                }`
+              });
+            }
+          }}
+          onFocus={() => {
+            let prefixRemovedValue = this.state.inputValue;
+            if (prefixRemovedValue !== null && isNaN(prefixRemovedValue)) {
+              prefixRemovedValue = prefixRemovedValue.slice(1);
+            }
+            if (
+              prefixRemovedValue !== null &&
+              !isNaN(prefixRemovedValue) &&
+              prefixRemovedValue > 0
+            ) {
+              this.setState({ inputValue: this.state.inputValue.slice(1) });
+            } else {
+              this.setState({ inputValue: null });
+            }
+          }}
+          value={this.state.inputValue}
         />
       );
 
