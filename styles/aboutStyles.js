@@ -24,6 +24,7 @@ export default {
     flex: 1,
     fontSize: 20,
     color: "#111",
-    padding: 20
+    padding: 20,
+    paddingBottom: 40
   }
 };

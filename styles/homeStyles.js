@@ -52,7 +52,8 @@ export default {
   },
   buffer: {
     height: 50,
-    backgroundColor: "white"
+    backgroundColor: "white",
+    elevation: 10
   },
   input: {
     flex: 1,
@@ -60,7 +61,8 @@ export default {
     justifyContent: "center",
     alignItems: "center",
     textAlign: "center",
-    backgroundColor: "white"
+    backgroundColor: "white",
+    elevation: 10
   },
   description: {
     flex: 5,

@@ -12,6 +12,7 @@ import email from "react-native-email";
 import emailImg from "../images/email.png";
 import likeImg from "../images/like.png";
 import appImg from "../images/app.png";
+import mapImg from "../images/mapEdited.jpg";
 
 //All icons from Freepik
 
@@ -40,7 +41,10 @@ class Contact extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View /*style={styles.contactWrapper}*/>
+        <View style={styles.titleWrapper}>
+          <Image source={mapImg} style={styles.map} />
+        </View>
+        <View style={styles.contactWrapper}>
           <View style={styles.email}>
             <TouchableHighlight onPress={() => this.handleReview()}>
               <View style={styles.emailTouchWrapper}>
@@ -79,12 +83,11 @@ class Contact extends Component {
               </View>
             </TouchableHighlight>
           </View>
-
-          <View style={styles.credit}>
-            <Text style={styles.text}>
-              Violent Hobo Enterprises - {new Date().getFullYear()}
-            </Text>
-          </View>
+        </View>
+        <View style={styles.credit}>
+          <Text style={styles.text}>
+            Violent Hobo Enterprises - {new Date().getFullYear()}
+          </Text>
         </View>
       </View>
     );
