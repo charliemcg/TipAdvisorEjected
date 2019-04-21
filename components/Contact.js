@@ -47,7 +47,11 @@ class Contact extends Component {
         </View>
         <View style={styles.contactWrapper}>
           <View style={styles.touchableWrapper}>
-            <TouchableHighlight onPress={() => this.handleReview()}>
+            <TouchableHighlight
+              onPress={() => this.handleReview()}
+              underlayColor="#eee"
+              style={{ borderRadius: 20 }}
+            >
               <View style={styles.touchWrapper}>
                 <View style={styles.textWrapper}>
                   <Text style={styles.text}>Leave a review</Text>
@@ -60,7 +64,11 @@ class Contact extends Component {
           </View>
 
           <View style={styles.touchableWrapper}>
-            <TouchableHighlight onPress={() => this.handleEmail()}>
+            <TouchableHighlight
+              onPress={() => this.handleEmail()}
+              underlayColor="#eee"
+              style={{ borderRadius: 20 }}
+            >
               <View style={styles.touchWrapper}>
                 <View style={styles.textWrapper}>
                   <Text style={styles.text}>Email</Text>
@@ -73,7 +81,11 @@ class Contact extends Component {
           </View>
 
           <View style={styles.touchableWrapper}>
-            <TouchableHighlight onPress={() => this.handleMoreApps()}>
+            <TouchableHighlight
+              onPress={() => this.handleMoreApps()}
+              underlayColor="#eee"
+              style={{ borderRadius: 20 }}
+            >
               <View style={styles.touchWrapper}>
                 <View style={styles.textWrapper}>
                   <Text style={styles.text}>More apps</Text>

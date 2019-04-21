@@ -153,7 +153,7 @@ class Home extends Component {
 
     const getBuffer =
       this.props.country.tips[this.props.country.selectedTipIndex] ===
-      null ? null : (
+      null ? null : this.props.country.name === null ? null : (
         <View style={styles.buffer} />
       );
 
@@ -165,7 +165,7 @@ class Home extends Component {
 
     const getCountryRow =
       this.props.country.name === null ? (
-        <ActivityIndicator size="large" />
+        <ActivityIndicator size="large" style={{ marginTop: 150 }} />
       ) : (
         <View style={styles.countryRow}>
           <View style={styles.flag}>
