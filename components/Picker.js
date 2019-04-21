@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { changeCountry } from "../actions";
+import { changeCountry, calculateTip } from "../actions";
 import { countries } from "../countryList";
 import { Picker, Alert, View, Text } from "react-native";
 import styles from "../styles/pickerStyles";
@@ -35,6 +35,7 @@ class CountryPicker extends Component {
 const mapStateToProps = state => {
   return {
     country: state.country,
+    enteredValue: state.enteredValue,
     amount: state.amount,
     err: state.err
   };
@@ -44,6 +45,9 @@ const mapDispatchToProps = dispatch => {
   return {
     changeCountry: country => {
       dispatch(changeCountry(country));
+    },
+    calculateTip: amount => {
+      dispatch(calculateTip(amount));
     }
   };
 };

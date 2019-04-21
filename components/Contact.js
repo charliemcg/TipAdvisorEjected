@@ -53,13 +53,7 @@ class Contact extends Component {
                   <Text style={styles.text}>Leave a review</Text>
                 </View>
                 <View style={styles.imgWrapper}>
-                  {/* <Image style={styles.img} source={likeImg} /> */}
-                  <Icon
-                    // style={styles.img}
-                    name="star-face"
-                    color={"#000"}
-                    size={50}
-                  />
+                  <Icon name="star-face" color={"#888"} size={50} />
                 </View>
               </View>
             </TouchableHighlight>
@@ -72,8 +66,7 @@ class Contact extends Component {
                   <Text style={styles.text}>Email</Text>
                 </View>
                 <View style={styles.imgWrapper}>
-                  {/* <Image style={styles.img} source={emailImg} /> */}
-                  <Icon name="email-outline" color={"#000"} size={50} />
+                  <Icon name="email-outline" color={"#888"} size={50} />
                 </View>
               </View>
             </TouchableHighlight>
@@ -86,8 +79,7 @@ class Contact extends Component {
                   <Text style={styles.text}>More apps</Text>
                 </View>
                 <View style={styles.imgWrapper}>
-                  {/* <Image style={styles.img} source={appImg} /> */}
-                  <Icon name="cellphone-arrow-down" color={"#000"} size={50} />
+                  <Icon name="cellphone-arrow-down" color={"#888"} size={50} />
                 </View>
               </View>
             </TouchableHighlight>

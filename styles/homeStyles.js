@@ -35,16 +35,15 @@ export default {
     borderWidth: 1,
     borderRadius: 20,
     borderColor: "#ddd",
-    // borderBottomWidth: 0,
     elevation: 20
   },
   flag: {
-    width: "20%",
+    width: "30%",
     justifyContent: "center",
     alignItems: "center"
   },
   picker: {
-    width: "80%",
+    width: "70%",
     height: "80%",
     justifyContent: "center",
     alignItems: "center"

@@ -1,8 +1,14 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Text, View, TouchableHighlight, ScrollView } from "react-native";
+import {
+  Text,
+  View,
+  TouchableHighlight,
+  ScrollView,
+  Alert
+} from "react-native";
 import styles from "../styles/validatedTipStyles";
-import { setSelectedIndex } from "../actions";
+import { calculateTip, setSelectedIndex } from "../actions";
 
 function IsOptional(value) {
   return value.country.tips[value.country.selectedTipIndex].optional ? (
@@ -28,7 +34,10 @@ class ValidatedTip extends Component {
               <View key={i}>
                 <TouchableHighlight
                   style={useThisButtonStyle}
-                  onPress={() => this.props.setSelectedIndex(i)}
+                  onPress={() => {
+                    this.props.setSelectedIndex(i);
+                    this.props.calculateTip(this.props.enteredValue);
+                  }}
                 >
                   <Text style={useThisTextStyle}>{item.type}</Text>
                 </TouchableHighlight>
@@ -113,6 +122,7 @@ class ValidatedTip extends Component {
 const mapStateToProps = state => {
   return {
     country: state.country,
+    enteredValue: state.enteredValue,
     amount: state.amount,
     err: state.err
   };
@@ -122,6 +132,9 @@ const mapDispatchToProps = dispatch => {
   return {
     setSelectedIndex: index => {
       dispatch(setSelectedIndex(index));
+    },
+    calculateTip: amount => {
+      dispatch(calculateTip(amount));
     }
   };
 };

@@ -22,6 +22,7 @@ function getCountryFromDevice() {
           selectedTipIndex: countries[i].selectedTipIndex,
           currency: countries[i].currency
         },
+        enteredValue: 0,
         amount: 0,
         err: null
       };
@@ -35,6 +36,7 @@ function getCountryFromDevice() {
       selectedTipIndex: 0,
       currency: "؋"
     },
+    enteredValue: 0,
     amount: 0,
     err: null
   };
@@ -50,13 +52,13 @@ const reducer = (state = getCountryFromDevice(), action) => {
       };
       break;
     case "CALCULATE_TIP":
-      // let newAmount = action.payload * state.country.tip;
       let newAmount =
         action.payload *
         state.country.tips[state.country.selectedTipIndex].percentage;
       newAmount = newAmount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,");
       state = {
         ...state,
+        enteredValue: action.payload,
         amount: newAmount
       };
       break;
