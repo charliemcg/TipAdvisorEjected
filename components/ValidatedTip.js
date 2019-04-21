@@ -17,6 +17,17 @@ function IsOptional(value) {
 }
 
 class ValidatedTip extends Component {
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextProps.country.name !== this.props.country.name) {
+      try {
+        this.props.calculateTip(this.props.enteredValue);
+      } catch (e) {
+        Alert.alert(String(e));
+      }
+    }
+    return true;
+  }
+
   render() {
     const { name, tips, selectedTipIndex, currency } = this.props.country;
 

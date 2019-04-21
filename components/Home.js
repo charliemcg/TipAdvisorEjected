@@ -29,6 +29,13 @@ class Home extends Component {
     }
   };
 
+  // shouldComponentUpdate(nextProps, nextState) {
+  // return this.state.value !== nextState.value;
+  // Alert.alert(String(nextProps.country.name));
+  // Alert.alert(String(this.props.country.name));
+  // return nextProps.country.name !== this.props.country.name;
+  // }
+
   render() {
     const getTextInput =
       this.props.country.tips[this.props.country.selectedTipIndex] ===
@@ -110,9 +117,9 @@ class Home extends Component {
 }
 
 const mapStateToProps = state => {
-  // Alert.alert("Mapping state to props");
   return {
     country: state.country,
+    enteredValue: state.enteredValue,
     amount: state.amount,
     err: state.err
   };
