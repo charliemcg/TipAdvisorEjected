@@ -29,12 +29,26 @@ class Home extends Component {
     }
   };
 
-  // shouldComponentUpdate(nextProps, nextState) {
-  // return this.state.value !== nextState.value;
-  // Alert.alert(String(nextProps.country.name));
-  // Alert.alert(String(this.props.country.name));
-  // return nextProps.country.name !== this.props.country.name;
-  // }
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextProps.country.name !== this.props.country.name) {
+      let prefixRemovedValue = this.state.inputValue;
+      const { currency } = this.props.country;
+      if (currency.length === 1) {
+        prefixRemovedValue = prefixRemovedValue.slice(1);
+      } else if (currency.length === 2) {
+        prefixRemovedValue = prefixRemovedValue.slice(2);
+      } else if (currency.length === 3) {
+        prefixRemovedValue = prefixRemovedValue.slice(3);
+      } else {
+        //error occured
+        prefixRemovedValue = null;
+      }
+      this.setState({
+        inputValue: `${nextProps.country.currency}${prefixRemovedValue}`
+      });
+    }
+    return true;
+  }
 
   render() {
     const getTextInput =
@@ -61,28 +75,13 @@ class Home extends Component {
             let sliceAmount = 0;
             if (prefixRemovedValue !== null && isNaN(prefixRemovedValue)) {
               const { currency } = this.props.country;
-              if (
-                currency === "L" ||
-                currency === "$" ||
-                currency === "֏" ||
-                currency === "€" ||
-                currency === "₹" ||
-                currency === "₪" ||
-                currency === "₽" ||
-                currency === "₺" ||
-                currency === "₴"
-              ) {
+              if (currency.length === 1) {
                 prefixRemovedValue = prefixRemovedValue.slice(1);
                 sliceAmount = 1;
-              } else if (
-                currency === "лв" ||
-                currency === "kn" ||
-                currency === "Rp" ||
-                currency === "zł"
-              ) {
+              } else if (currency.length === 2) {
                 prefixRemovedValue = prefixRemovedValue.slice(2);
                 sliceAmount = 2;
-              } else if (currency === "ج.م" || currency === "lei") {
+              } else if (currency.length === 3) {
                 prefixRemovedValue = prefixRemovedValue.slice(3);
                 sliceAmount = 3;
               } else {
@@ -95,31 +94,9 @@ class Home extends Component {
               !isNaN(prefixRemovedValue) &&
               prefixRemovedValue > 0
             ) {
-              // const { currency } = this.props.country;
-              // if (
-              //   currency === "L" ||
-              //   currency === "$" ||
-              //   currency === "֏" ||
-              //   currency === "€" ||
-              //   currency === "₹" ||
-              //   currency === "₪" ||
-              //   currency === "₽" ||
-              //   currency === "₺" ||
-              //   currency === "₴"
-              // ) {
               this.setState({
                 inputValue: this.state.inputValue.slice(sliceAmount)
               });
-              // } else if (
-              //   currency === "лв" ||
-              //   currency === "kn" ||
-              //   currency === "Rp" ||
-              //   currency === "zł"
-              // ) {
-              //   this.setState({ inputValue: this.state.inputValue.slice(2) });
-              // } else if (currency === "ج.م" || currency === "lei") {
-              //   this.setState({ inputValue: this.state.inputValue.slice(3) });
-              // }
             } else {
               this.setState({ inputValue: null });
             }
