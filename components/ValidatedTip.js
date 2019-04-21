@@ -17,12 +17,13 @@ function IsOptional(value) {
 }
 
 class ValidatedTip extends Component {
+  // This method looks screwy. Check the performance
   shouldComponentUpdate(nextProps, nextState) {
     if (nextProps.country.name !== this.props.country.name) {
       try {
         this.props.calculateTip(this.props.enteredValue);
       } catch (e) {
-        Alert.alert(String(e));
+        // Alert.alert(String(e));
       }
     }
     return true;

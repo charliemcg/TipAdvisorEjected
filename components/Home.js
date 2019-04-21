@@ -58,15 +58,68 @@ class Home extends Component {
           }}
           onFocus={() => {
             let prefixRemovedValue = this.state.inputValue;
+            let sliceAmount = 0;
             if (prefixRemovedValue !== null && isNaN(prefixRemovedValue)) {
-              prefixRemovedValue = prefixRemovedValue.slice(1);
+              const { currency } = this.props.country;
+              if (
+                currency === "L" ||
+                currency === "$" ||
+                currency === "֏" ||
+                currency === "€" ||
+                currency === "₹" ||
+                currency === "₪" ||
+                currency === "₽" ||
+                currency === "₺" ||
+                currency === "₴"
+              ) {
+                prefixRemovedValue = prefixRemovedValue.slice(1);
+                sliceAmount = 1;
+              } else if (
+                currency === "лв" ||
+                currency === "kn" ||
+                currency === "Rp" ||
+                currency === "zł"
+              ) {
+                prefixRemovedValue = prefixRemovedValue.slice(2);
+                sliceAmount = 2;
+              } else if (currency === "ج.م" || currency === "lei") {
+                prefixRemovedValue = prefixRemovedValue.slice(3);
+                sliceAmount = 3;
+              } else {
+                //error occured
+                prefixRemovedValue = null;
+              }
             }
             if (
               prefixRemovedValue !== null &&
               !isNaN(prefixRemovedValue) &&
               prefixRemovedValue > 0
             ) {
-              this.setState({ inputValue: this.state.inputValue.slice(1) });
+              // const { currency } = this.props.country;
+              // if (
+              //   currency === "L" ||
+              //   currency === "$" ||
+              //   currency === "֏" ||
+              //   currency === "€" ||
+              //   currency === "₹" ||
+              //   currency === "₪" ||
+              //   currency === "₽" ||
+              //   currency === "₺" ||
+              //   currency === "₴"
+              // ) {
+              this.setState({
+                inputValue: this.state.inputValue.slice(sliceAmount)
+              });
+              // } else if (
+              //   currency === "лв" ||
+              //   currency === "kn" ||
+              //   currency === "Rp" ||
+              //   currency === "zł"
+              // ) {
+              //   this.setState({ inputValue: this.state.inputValue.slice(2) });
+              // } else if (currency === "ج.م" || currency === "lei") {
+              //   this.setState({ inputValue: this.state.inputValue.slice(3) });
+              // }
             } else {
               this.setState({ inputValue: null });
             }
