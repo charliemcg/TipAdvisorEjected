@@ -1,5 +1,5 @@
 import { countries } from "../countryList";
-import { Alert } from "react-native";
+import { Alert, AsyncStorage } from "react-native";
 import DeviceInfo from "react-native-device-info";
 
 function findCountry(payload) {
@@ -11,23 +11,23 @@ function findCountry(payload) {
 }
 
 function getCountryFromDevice() {
-  const countryCode = DeviceInfo.getDeviceCountry();
-  for (let i = 0; i < countries.length; i++) {
-    if (countryCode === countries[i].flag) {
-      return {
-        country: {
-          name: countries[i].name,
-          flag: countryCode,
-          tips: countries[i].tips,
-          selectedTipIndex: countries[i].selectedTipIndex,
-          currency: countries[i].currency
-        },
-        enteredValue: 0,
-        amount: 0,
-        err: null
-      };
-    }
-  }
+  // const countryCode = DeviceInfo.getDeviceCountry();
+  // for (let i = 0; i < countries.length; i++) {
+  //   if (countryCode === countries[i].flag) {
+  //     return {
+  //       country: {
+  //         name: countries[i].name,
+  //         flag: countryCode,
+  //         tips: countries[i].tips,
+  //         selectedTipIndex: countries[i].selectedTipIndex,
+  //         currency: countries[i].currency
+  //       },
+  //       enteredValue: 0,
+  //       amount: 0,
+  //       err: null
+  //     };
+  //   }
+  // }
   return {
     country: {
       name: "Afghanistan",
@@ -46,6 +46,8 @@ const reducer = (state = getCountryFromDevice(), action) => {
   switch (action.type) {
     case "CHANGE_COUNTRY":
       let newCountry = findCountry(action.payload);
+      //Persisting new country in AsyncStorage
+      AsyncStorage.setItem("COUNTRY", newCountry.name);
       state = {
         ...state,
         country: newCountry

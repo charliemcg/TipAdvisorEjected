@@ -1,11 +1,20 @@
 import React, { Component } from "react";
-import { Text, View, Image, TextInput, Alert } from "react-native";
+import {
+  Text,
+  View,
+  Image,
+  TextInput,
+  Alert,
+  AsyncStorage
+} from "react-native";
 import styles from "../styles/homeStyles";
 import { connect } from "react-redux";
 import Picker from "./Picker";
-import { calculateTip, setError } from "../actions";
+import { changeCountry, calculateTip, setError } from "../actions";
 import ValidatedTip from "./ValidatedTip";
 import mapImg from "../images/mapEdited.jpg";
+import DeviceInfo from "react-native-device-info";
+import { countries } from "../countryList";
 
 class Home extends Component {
   state = {
@@ -29,11 +38,37 @@ class Home extends Component {
     }
   };
 
+  componentWillMount() {
+    //get persisted country from asyncstorage
+    this.getCountryFromDevice();
+  }
+
+  getCountryFromDevice = async () => {
+    try {
+      const value = await AsyncStorage.getItem("COUNTRY");
+      if (value !== null) {
+        this.props.changeCountry(value);
+      } else {
+        const countryCode = DeviceInfo.getDeviceCountry();
+        for (let i = 0; i < countries.length; i++) {
+          if (countryCode === countries[i].flag) {
+            this.props.changeCountry(countries[i].name);
+          }
+        }
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
   shouldComponentUpdate(nextProps, nextState) {
+    //Detecting if country has changed
     if (nextProps.country.name !== this.props.country.name) {
       let prefixRemovedValue = this.state.inputValue;
+      //Checking if currency symbol needs to be removed
       if (prefixRemovedValue !== null && isNaN(prefixRemovedValue)) {
         const { currency } = this.props.country;
+        //Removing currency symbol
         if (currency.length === 1) {
           prefixRemovedValue = prefixRemovedValue.slice(1);
         } else if (currency.length === 2) {
@@ -44,6 +79,7 @@ class Home extends Component {
           //error occured
           prefixRemovedValue = null;
         }
+        //checking that input value is a valid number to which a currency symbol should be appended
         if (
           prefixRemovedValue !== null &&
           !isNaN(prefixRemovedValue) &&
@@ -84,17 +120,17 @@ class Home extends Component {
             if (prefixRemovedValue !== null && isNaN(prefixRemovedValue)) {
               const { currency } = this.props.country;
               if (currency.length === 1) {
-                prefixRemovedValue = prefixRemovedValue.slice(1);
                 sliceAmount = 1;
               } else if (currency.length === 2) {
-                prefixRemovedValue = prefixRemovedValue.slice(2);
                 sliceAmount = 2;
               } else if (currency.length === 3) {
-                prefixRemovedValue = prefixRemovedValue.slice(3);
                 sliceAmount = 3;
               } else {
                 //error occured
                 prefixRemovedValue = null;
+              }
+              if (prefixRemovedValue !== null) {
+                prefixRemovedValue = prefixRemovedValue.slice(sliceAmount);
               }
             }
             if (
@@ -165,6 +201,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
+    changeCountry: country => {
+      dispatch(changeCountry(country));
+    },
     calculateTip: amount => {
       dispatch(calculateTip(amount));
     },
