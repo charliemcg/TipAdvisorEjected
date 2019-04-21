@@ -1,6 +1,7 @@
 import { countries } from "../countryList";
-import { Alert, AsyncStorage } from "react-native";
+import { Alert } from "react-native";
 import DeviceInfo from "react-native-device-info";
+import AsyncStorage from "@react-native-community/async-storage";
 
 function findCountry(payload) {
   for (let i = 0; i < countries.length; i++) {
@@ -28,13 +29,25 @@ function getCountryFromDevice() {
   //     };
   //   }
   // }
+  // return {
+  //   country: {
+  //     name: "Afghanistan",
+  //     flag: "AF",
+  //     tips: [null],
+  //     selectedTipIndex: 0,
+  //     currency: "؋"
+  //   },
+  //   enteredValue: 0,
+  //   amount: 0,
+  //   err: null
+  // };
   return {
     country: {
-      name: "Afghanistan",
-      flag: "AF",
+      name: null,
+      flag: null,
       tips: [null],
-      selectedTipIndex: 0,
-      currency: "؋"
+      selectedTipIndex: null,
+      currency: null
     },
     enteredValue: 0,
     amount: 0,

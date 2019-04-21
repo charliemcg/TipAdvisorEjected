@@ -5,7 +5,8 @@ import {
   Image,
   TextInput,
   Alert,
-  AsyncStorage
+  // AsyncStorage,
+  ActivityIndicator
 } from "react-native";
 import styles from "../styles/homeStyles";
 import { connect } from "react-redux";
@@ -15,6 +16,7 @@ import ValidatedTip from "./ValidatedTip";
 import mapImg from "../images/mapEdited.jpg";
 import DeviceInfo from "react-native-device-info";
 import { countries } from "../countryList";
+import AsyncStorage from "@react-native-community/async-storage";
 
 class Home extends Component {
   state = {
@@ -39,7 +41,7 @@ class Home extends Component {
   };
 
   componentWillMount() {
-    //get persisted country from asyncstorage
+    //get persisted country from AsyncStorage
     this.getCountryFromDevice();
   }
 
@@ -161,13 +163,10 @@ class Home extends Component {
       this.props.country.flag +
       "/shiny/64.png";
 
-    return (
-      <View style={styles.container}>
-        <View style={styles.titleWrapper}>
-          <Image source={mapImg} style={styles.map} />
-          <Text style={styles.title}>Tip Advisor</Text>
-        </View>
-        {getBuffer}
+    const getCountryRow =
+      this.props.country.name === null ? (
+        <ActivityIndicator size="large" />
+      ) : (
         <View style={styles.countryRow}>
           <View style={styles.flag}>
             <Image
@@ -179,12 +178,27 @@ class Home extends Component {
             <Picker />
           </View>
         </View>
+      );
+
+    const getTipRow =
+      this.props.country.name === null ? null : (
         <View style={styles.tipRow}>
           {getTextInput}
           <View style={styles.description}>
             <ValidatedTip />
           </View>
         </View>
+      );
+
+    return (
+      <View style={styles.container}>
+        <View style={styles.titleWrapper}>
+          <Image source={mapImg} style={styles.map} />
+          <Text style={styles.title}>Tip Advisor</Text>
+        </View>
+        {getBuffer}
+        {getCountryRow}
+        {getTipRow}
       </View>
     );
   }
