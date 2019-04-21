@@ -32,20 +32,28 @@ class Home extends Component {
   shouldComponentUpdate(nextProps, nextState) {
     if (nextProps.country.name !== this.props.country.name) {
       let prefixRemovedValue = this.state.inputValue;
-      const { currency } = this.props.country;
-      if (currency.length === 1) {
-        prefixRemovedValue = prefixRemovedValue.slice(1);
-      } else if (currency.length === 2) {
-        prefixRemovedValue = prefixRemovedValue.slice(2);
-      } else if (currency.length === 3) {
-        prefixRemovedValue = prefixRemovedValue.slice(3);
-      } else {
-        //error occured
-        prefixRemovedValue = null;
+      if (prefixRemovedValue !== null && isNaN(prefixRemovedValue)) {
+        const { currency } = this.props.country;
+        if (currency.length === 1) {
+          prefixRemovedValue = prefixRemovedValue.slice(1);
+        } else if (currency.length === 2) {
+          prefixRemovedValue = prefixRemovedValue.slice(2);
+        } else if (currency.length === 3) {
+          prefixRemovedValue = prefixRemovedValue.slice(3);
+        } else {
+          //error occured
+          prefixRemovedValue = null;
+        }
+        if (
+          prefixRemovedValue !== null &&
+          !isNaN(prefixRemovedValue) &&
+          prefixRemovedValue > 0
+        ) {
+          this.setState({
+            inputValue: `${nextProps.country.currency}${prefixRemovedValue}`
+          });
+        }
       }
-      this.setState({
-        inputValue: `${nextProps.country.currency}${prefixRemovedValue}`
-      });
     }
     return true;
   }
