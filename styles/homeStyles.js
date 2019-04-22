@@ -4,24 +4,6 @@ export default {
     height: "100%",
     backgroundColor: "#eee"
   },
-  titleWrapper: {
-    height: 150,
-    justifyContent: "space-between",
-    alignItems: "center"
-  },
-  title: {
-    padding: 15,
-    fontSize: 39,
-    color: "#fff",
-    textAlign: "center",
-    fontWeight: "bold",
-    zIndex: 1,
-    position: "absolute"
-  },
-  map: {
-    flex: 1,
-    resizeMode: "stretch"
-  },
   countryRow: {
     position: "absolute",
     flexDirection: "row",
@@ -35,7 +17,7 @@ export default {
     borderWidth: 1,
     borderRadius: 20,
     borderColor: "#ddd",
-    elevation: 20
+    elevation: 6
   },
   flag: {
     width: "30%",
@@ -54,7 +36,7 @@ export default {
   buffer: {
     height: 50,
     backgroundColor: "white",
-    elevation: 10
+    elevation: 5
   },
   input: {
     flex: 1,
@@ -63,7 +45,7 @@ export default {
     alignItems: "center",
     textAlign: "center",
     backgroundColor: "white",
-    elevation: 10
+    elevation: 5
   },
   description: {
     flex: 5,

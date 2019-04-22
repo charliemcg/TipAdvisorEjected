@@ -1,22 +1,14 @@
 import React, { Component } from "react";
-import {
-  Text,
-  View,
-  Image,
-  TextInput,
-  Alert,
-  // AsyncStorage,
-  ActivityIndicator
-} from "react-native";
+import { View, Image, TextInput, Alert, ActivityIndicator } from "react-native";
 import styles from "../styles/homeStyles";
 import { connect } from "react-redux";
 import Picker from "./Picker";
 import { changeCountry, calculateTip, setError } from "../actions";
 import ValidatedTip from "./ValidatedTip";
-import mapImg from "../images/mapEdited.jpg";
 import DeviceInfo from "react-native-device-info";
 import { countries } from "../countryList";
 import AsyncStorage from "@react-native-community/async-storage";
+import Title from "./Title";
 
 class Home extends Component {
   state = {
@@ -192,10 +184,7 @@ class Home extends Component {
 
     return (
       <View style={styles.container}>
-        <View style={styles.titleWrapper}>
-          <Image source={mapImg} style={styles.map} />
-          <Text style={styles.title}>Tip Advisor</Text>
-        </View>
+        <Title />
         {getBuffer}
         {getCountryRow}
         {getTipRow}

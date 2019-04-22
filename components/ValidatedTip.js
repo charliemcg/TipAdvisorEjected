@@ -23,7 +23,7 @@ class ValidatedTip extends Component {
       try {
         this.props.calculateTip(this.props.enteredValue);
       } catch (e) {
-        // Alert.alert(String(e));
+        console.log(e);
       }
     }
     return true;

@@ -1,23 +1,13 @@
 import React, { Component } from "react";
-import {
-  Text,
-  View,
-  Image,
-  TextInput,
-  Alert,
-  ListView,
-  ScrollView
-} from "react-native";
+import { Text, View, Image, TextInput, Alert, ScrollView } from "react-native";
 import styles from "../styles/aboutStyles";
-import mapImg from "../images/mapEdited.jpg";
+import Title from "./Title";
 
 class About extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.titleWrapper}>
-          <Image source={mapImg} style={styles.map} />
-        </View>
+        <Title />
         <View style={styles.descriptionWrapper}>
           <ScrollView>
             <Text style={styles.text}>

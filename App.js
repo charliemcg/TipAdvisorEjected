@@ -49,14 +49,11 @@ const Navigator = createBottomTabNavigator(
   {
     tabBarOptions: {
       activeTintColor: "#338a3e",
-      // activeIconColor: "#338a3e",
       labelStyle: {
         fontSize: 15
       },
       style: {
         backgroundColor: "#fff"
-
-        // tabStyle: { buttonColor: "#0ff" }
       }
     }
   }

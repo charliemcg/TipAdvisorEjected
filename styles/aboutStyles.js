@@ -6,13 +6,6 @@ export default {
     justifyContent: "space-between",
     alignItems: "center"
   },
-  titleWrapper: {
-    height: 150
-  },
-  map: {
-    flex: 1,
-    resizeMode: "stretch"
-  },
   descriptionWrapper: {
     position: "absolute",
     backgroundColor: "#fff",

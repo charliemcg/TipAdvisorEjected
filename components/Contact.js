@@ -9,16 +9,13 @@ import {
 } from "react-native";
 import styles from "../styles/contactStyles";
 import email from "react-native-email";
-import emailImg from "../images/email.png";
-import likeImg from "../images/like.png";
-import appImg from "../images/app.png";
-import mapImg from "../images/mapEdited.jpg";
+import mapImg from "../images/mapBlurred.jpg";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-
-//All icons from Freepik
+import Title from "./Title";
 
 const EMAIL = "violenthoboenterprises@gmail.com";
-const REVIEW = ""; //Need to get the link for ios and android
+const REVIEW =
+  "https://play.google.com/store/apps/details?id=com.violenthoboenterprises.tipadvisor"; //Need to get the link for both ios and android
 const MORE_APPS =
   "https://play.google.com/store/apps/developer?id=ViolentHoboEnterprises";
 
@@ -42,9 +39,7 @@ class Contact extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.titleWrapper}>
-          <Image source={mapImg} style={styles.map} />
-        </View>
+        <Title />
         <View style={styles.contactWrapper}>
           <View style={styles.touchableWrapper}>
             <TouchableHighlight
