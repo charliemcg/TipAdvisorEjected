@@ -13,16 +13,17 @@ export default {
     borderWidth: 1,
     borderRadius: 20,
     borderColor: "#ddd",
-    marginLeft: 20,
-    marginRight: 20,
-    marginTop: 30,
-    elevation: 20
+    marginLeft: 30,
+    marginRight: 30,
+    marginTop: 90,
+    elevation: 10
   },
   text: {
     flex: 1,
-    fontSize: 15,
+    fontSize: 20,
     color: "#111",
-    padding: 20,
-    paddingBottom: 40
+    padding: 30,
+    paddingBottom: 40,
+    paddingTop: 40
   }
 };

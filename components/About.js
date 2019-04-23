@@ -1,19 +1,38 @@
 import React, { Component } from "react";
-import { Text, View, Image, TextInput, Alert, ScrollView } from "react-native";
+import {
+  Text,
+  View,
+  Image,
+  TextInput,
+  Alert,
+  ScrollView,
+  Dimensions
+} from "react-native";
 import styles from "../styles/aboutStyles";
+import stylesMedium from "../styles/aboutStylesMedium";
+import stylesLarge from "../styles/aboutStylesLarge";
 import Title from "./Title";
 
 class About extends Component {
+  getSize = () => {
+    return Dimensions.get("window").width < 550
+      ? styles
+      : Dimensions.get("window").width < 650
+      ? stylesMedium
+      : stylesLarge;
+  };
   render() {
+    const sizeAdjustedStyles = this.getSize();
     return (
-      <View style={styles.container}>
+      <View style={sizeAdjustedStyles.container}>
         <Title />
-        <View style={styles.descriptionWrapper}>
+        <View style={sizeAdjustedStyles.descriptionWrapper}>
           <ScrollView>
-            <Text style={styles.text}>
+            <Text style={sizeAdjustedStyles.text}>
               Here are a few quick points about this app:{`\n\n`}
               {`\u2022`} Just because tipping is accepted does not mean that it
-              is expected. Some tips in this app are labelled "Tipping Optional"
+              is expected. Some tips in this app are labelled "Tipping
+              Optional". It may be enough to just say "keep the change".
               {`\n\n`}
               {`\u2022`} This app calculates the minimum expected amounts.
               Rounding up is advised for great service.{`\n\n`}

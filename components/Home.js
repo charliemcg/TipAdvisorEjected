@@ -1,6 +1,15 @@
 import React, { Component } from "react";
-import { View, Image, TextInput, Alert, ActivityIndicator } from "react-native";
+import {
+  View,
+  Image,
+  TextInput,
+  Alert,
+  ActivityIndicator,
+  Dimensions
+} from "react-native";
 import styles from "../styles/homeStyles";
+import stylesMedium from "../styles/homeStylesMedium";
+import stylesLarge from "../styles/homeStylesLarge";
 import { connect } from "react-redux";
 import Picker from "./Picker";
 import { changeCountry, calculateTip, setError } from "../actions";
@@ -69,6 +78,8 @@ class Home extends Component {
           prefixRemovedValue = prefixRemovedValue.slice(2);
         } else if (currency.length === 3) {
           prefixRemovedValue = prefixRemovedValue.slice(3);
+        } else if (currency.length === 4) {
+          prefixRemovedValue = prefixRemovedValue.slice(4);
         } else {
           //error occured
           prefixRemovedValue = null;
@@ -87,13 +98,20 @@ class Home extends Component {
     }
     return true;
   }
-
+  getSize = () => {
+    return Dimensions.get("window").width < 550
+      ? styles
+      : Dimensions.get("window").width < 650
+      ? stylesMedium
+      : stylesLarge;
+  };
   render() {
+    const sizeAdjustedStyles = this.getSize();
     const getTextInput =
       this.props.country.tips[this.props.country.selectedTipIndex] ===
       null ? null : (
         <TextInput
-          style={styles.input}
+          style={sizeAdjustedStyles.input}
           keyboardType="numeric"
           onChangeText={this.handleChange}
           placeholder="amount..."
@@ -119,6 +137,8 @@ class Home extends Component {
                 sliceAmount = 2;
               } else if (currency.length === 3) {
                 sliceAmount = 3;
+              } else if (currency.length === 4) {
+                sliceAmount = 4;
               } else {
                 //error occured
                 prefixRemovedValue = null;
@@ -146,7 +166,7 @@ class Home extends Component {
     const getBuffer =
       this.props.country.tips[this.props.country.selectedTipIndex] ===
       null ? null : this.props.country.name === null ? null : (
-        <View style={styles.buffer} />
+        <View style={sizeAdjustedStyles.buffer} />
       );
 
     //use flat instead of shiny for ios
@@ -159,14 +179,14 @@ class Home extends Component {
       this.props.country.name === null ? (
         <ActivityIndicator size="large" style={{ marginTop: 150 }} />
       ) : (
-        <View style={styles.countryRow}>
-          <View style={styles.flag}>
+        <View style={sizeAdjustedStyles.countryRow}>
+          <View style={sizeAdjustedStyles.flag}>
             <Image
               source={{ uri: flagImgUrl }}
               style={{ width: 50, height: 50 }}
             />
           </View>
-          <View style={styles.picker}>
+          <View style={sizeAdjustedStyles.picker}>
             <Picker />
           </View>
         </View>
@@ -174,16 +194,16 @@ class Home extends Component {
 
     const getTipRow =
       this.props.country.name === null ? null : (
-        <View style={styles.tipRow}>
+        <View style={sizeAdjustedStyles.tipRow}>
           {getTextInput}
-          <View style={styles.description}>
+          <View style={sizeAdjustedStyles.description}>
             <ValidatedTip />
           </View>
         </View>
       );
 
     return (
-      <View style={styles.container}>
+      <View style={sizeAdjustedStyles.container}>
         <Title />
         {getBuffer}
         {getCountryRow}

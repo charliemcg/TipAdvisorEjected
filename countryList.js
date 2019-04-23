@@ -28,6 +28,7 @@ export const countries = [
     tips: [null],
     selectedTipIndex: 0,
     currency: "د.ج"
+    // currency: ""
   },
   {
     name: "Andorra",
@@ -102,6 +103,7 @@ export const countries = [
     tips: [null],
     selectedTipIndex: 0,
     currency: ".د.ب"
+    // currency: ""
   },
   {
     name: "Bangladesh",
@@ -181,6 +183,13 @@ export const countries = [
     currency: "R$"
   },
   {
+    name: "Brunei",
+    flag: "BN",
+    tips: [null],
+    selectedTipIndex: 0,
+    currency: "$"
+  },
+  {
     name: "Bulgaria",
     flag: "BG",
     tips: [{ percentage: 0.1, optional: true }],
@@ -200,13 +209,6 @@ export const countries = [
     tips: [null],
     selectedTipIndex: 0,
     currency: "Fr"
-  },
-  {
-    name: "Brunei",
-    flag: "BN",
-    tips: [null],
-    selectedTipIndex: 0,
-    currency: "$"
   },
   {
     name: "Cambodia",
@@ -286,7 +288,7 @@ export const countries = [
     currency: "Fr"
   },
   {
-    name: "D.R. Congo",
+    name: "Congo, D.R.",
     flag: "CD",
     tips: [null],
     selectedTipIndex: 0,
@@ -450,7 +452,7 @@ export const countries = [
     currency: "Fr"
   },
   {
-    name: "The Gambia",
+    name: "Gambia, The",
     flag: "GM",
     tips: [null],
     selectedTipIndex: 0,
@@ -573,13 +575,6 @@ export const countries = [
     currency: "Rp"
   },
   {
-    name: "Italy",
-    flag: "IT",
-    tips: [null],
-    selectedTipIndex: 0,
-    currency: "€"
-  },
-  {
     name: "Iran",
     flag: "IR",
     tips: [null],
@@ -592,6 +587,7 @@ export const countries = [
     tips: [null],
     selectedTipIndex: 0,
     currency: "ع.د"
+    // currency: ""
   },
   {
     name: "Ireland",
@@ -606,6 +602,13 @@ export const countries = [
     tips: [{ percentage: 0.1, optional: false }],
     selectedTipIndex: 0,
     currency: "₪"
+  },
+  {
+    name: "Italy",
+    flag: "IT",
+    tips: [null],
+    selectedTipIndex: 0,
+    currency: "€"
   },
   {
     name: "Ivory Coast",
@@ -634,6 +637,7 @@ export const countries = [
     tips: [null],
     selectedTipIndex: 0,
     currency: "د.ا"
+    // currency: ""
   },
   {
     name: "Kazakhstan",
@@ -657,14 +661,14 @@ export const countries = [
     currency: "$"
   },
   {
-    name: "North Korea",
+    name: "Korea, North",
     flag: "KP",
     tips: [null],
     selectedTipIndex: 0,
     currency: "₩"
   },
   {
-    name: "South Korea",
+    name: "Korea, South",
     flag: "KR",
     tips: [null],
     selectedTipIndex: 0,
@@ -676,6 +680,7 @@ export const countries = [
     tips: [null],
     selectedTipIndex: 0,
     currency: "د.ك"
+    // currency: ""
   },
   {
     name: "Kyrgyzstan",
@@ -704,6 +709,7 @@ export const countries = [
     tips: [null],
     selectedTipIndex: 0,
     currency: "ل.ل"
+    // currency: ""
   },
   {
     name: "Lesotho",
@@ -720,6 +726,14 @@ export const countries = [
     currency: "$"
   },
   {
+    name: "Libya",
+    flag: "LY",
+    tips: [null],
+    selectedTipIndex: 0,
+    currency: "ل.د"
+    // currency: ""
+  },
+  {
     name: "Liechtenstein",
     flag: "LI",
     tips: [null],
@@ -732,13 +746,6 @@ export const countries = [
     tips: [{ percentage: 0.05, optional: false }],
     selectedTipIndex: 0,
     currency: "€"
-  },
-  {
-    name: "Libya",
-    flag: "LY",
-    tips: [null],
-    selectedTipIndex: 0,
-    currency: "ل.د"
   },
   {
     name: "Luxembourg",
@@ -942,6 +949,7 @@ export const countries = [
     tips: [null],
     selectedTipIndex: 0,
     currency: "ر.ع."
+    // currency: ""
   },
   {
     name: "Pakistan",
@@ -1012,6 +1020,7 @@ export const countries = [
     tips: [null],
     selectedTipIndex: 0,
     currency: "ر.ق"
+    // currency: ""
   },
   {
     name: "Romania",
@@ -1087,6 +1096,7 @@ export const countries = [
     tips: [null],
     selectedTipIndex: 0,
     currency: "ر.س"
+    // currency: ""
   },
   {
     name: "Senegal",
@@ -1159,13 +1169,6 @@ export const countries = [
     currency: "R"
   },
   {
-    name: "South Sudan",
-    flag: "SS",
-    tips: [null],
-    selectedTipIndex: 0,
-    currency: "	£"
-  },
-  {
     name: "Spain",
     flag: "ES",
     tips: [null],
@@ -1185,6 +1188,14 @@ export const countries = [
     tips: [null],
     selectedTipIndex: 0,
     currency: "ج.س."
+    // currency: ""
+  },
+  {
+    name: "Sudan, South",
+    flag: "SS",
+    tips: [null],
+    selectedTipIndex: 0,
+    currency: "	£"
   },
   {
     name: "Suriname",
@@ -1262,6 +1273,7 @@ export const countries = [
     tips: [null],
     selectedTipIndex: 0,
     currency: "د.ت"
+    // currency: ""
   },
   {
     name: "Turkey",
@@ -1304,6 +1316,7 @@ export const countries = [
     tips: [null],
     selectedTipIndex: 0,
     currency: "د.إ"
+    // currency: ""
   },
   {
     name: "United Kingdom",

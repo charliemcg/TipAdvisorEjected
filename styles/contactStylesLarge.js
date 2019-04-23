@@ -9,21 +9,21 @@ export default {
   contactWrapper: {
     position: "absolute",
     backgroundColor: "#fff",
-    height: "85%",
-    width: "90%",
+    height: "75%",
+    width: "70%",
     marginLeft: 20,
     marginRight: 20,
-    marginTop: 30,
-    padding: 20,
+    marginTop: 150,
+    padding: 60,
     borderWidth: 1,
     borderRadius: 20,
     borderColor: "#ddd",
-    elevation: 10
+    elevation: 5
   },
   touchableWrapper: {
     flex: 1,
-    marginTop: 30,
-    marginBottom: 10,
+    marginTop: 50,
+    marginBottom: 30,
     borderStyle: "solid",
     borderColor: "#aaa",
     backgroundColor: "#fff",
@@ -45,17 +45,17 @@ export default {
   },
   text: {
     color: "#111",
-    fontSize: 20
+    fontSize: 35
   },
   imgWrapper: {
     justifyContent: "center",
     width: "40%",
     alignItems: "center"
   },
-  // img: {
-  //   width: 50,
-  //   height: 50
-  // },
+  //   img: {
+  //     width: 90,
+  //     height: 90
+  //   },
   credit: {
     height: "10%",
     marginTop: 40,

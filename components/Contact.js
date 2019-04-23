@@ -5,11 +5,13 @@ import {
   Image,
   TouchableHighlight,
   Linking,
-  Alert
+  Alert,
+  Dimensions
 } from "react-native";
 import styles from "../styles/contactStyles";
+import stylesLarge from "../styles/contactStylesLarge";
+import stylesMedium from "../styles/contactStylesMedium";
 import email from "react-native-email";
-import mapImg from "../images/mapBlurred.jpg";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import Title from "./Title";
 
@@ -36,64 +38,80 @@ class Contact extends Component {
     // inform user of error
     email(EMAIL, {}).catch(err => console.error("An error occured", err));
   };
+  getSize = () => {
+    return Dimensions.get("window").width < 550
+      ? styles
+      : Dimensions.get("window").width < 650
+      ? stylesMedium
+      : stylesLarge;
+  };
+  getIconSize = () => {
+    return Dimensions.get("window").width > 650 ? 80 : 50;
+  };
   render() {
+    const sizeAdjustedStyles = this.getSize();
+    const iconSize = this.getIconSize();
     return (
-      <View style={styles.container}>
+      <View style={sizeAdjustedStyles.container}>
         <Title />
-        <View style={styles.contactWrapper}>
-          <View style={styles.touchableWrapper}>
+        <View style={sizeAdjustedStyles.contactWrapper}>
+          <View style={sizeAdjustedStyles.touchableWrapper}>
             <TouchableHighlight
               onPress={() => this.handleReview()}
               underlayColor="#eee"
               style={{ borderRadius: 20 }}
             >
-              <View style={styles.touchWrapper}>
-                <View style={styles.textWrapper}>
-                  <Text style={styles.text}>Leave a review</Text>
+              <View style={sizeAdjustedStyles.touchWrapper}>
+                <View style={sizeAdjustedStyles.textWrapper}>
+                  <Text style={sizeAdjustedStyles.text}>Leave a review</Text>
                 </View>
-                <View style={styles.imgWrapper}>
-                  <Icon name="star-face" color={"#888"} size={50} />
+                <View style={sizeAdjustedStyles.imgWrapper}>
+                  <Icon name="star-face" color={"#888"} size={iconSize} />
                 </View>
               </View>
             </TouchableHighlight>
           </View>
 
-          <View style={styles.touchableWrapper}>
+          <View style={sizeAdjustedStyles.touchableWrapper}>
             <TouchableHighlight
               onPress={() => this.handleEmail()}
               underlayColor="#eee"
               style={{ borderRadius: 20 }}
             >
-              <View style={styles.touchWrapper}>
-                <View style={styles.textWrapper}>
-                  <Text style={styles.text}>Email</Text>
+              <View style={sizeAdjustedStyles.touchWrapper}>
+                <View style={sizeAdjustedStyles.textWrapper}>
+                  <Text style={sizeAdjustedStyles.text}>Email</Text>
                 </View>
-                <View style={styles.imgWrapper}>
-                  <Icon name="email-outline" color={"#888"} size={50} />
+                <View style={sizeAdjustedStyles.imgWrapper}>
+                  <Icon name="email-outline" color={"#888"} size={iconSize} />
                 </View>
               </View>
             </TouchableHighlight>
           </View>
 
-          <View style={styles.touchableWrapper}>
+          <View style={sizeAdjustedStyles.touchableWrapper}>
             <TouchableHighlight
               onPress={() => this.handleMoreApps()}
               underlayColor="#eee"
               style={{ borderRadius: 20 }}
             >
-              <View style={styles.touchWrapper}>
-                <View style={styles.textWrapper}>
-                  <Text style={styles.text}>More apps</Text>
+              <View style={sizeAdjustedStyles.touchWrapper}>
+                <View style={sizeAdjustedStyles.textWrapper}>
+                  <Text style={sizeAdjustedStyles.text}>More apps</Text>
                 </View>
-                <View style={styles.imgWrapper}>
-                  <Icon name="cellphone-arrow-down" color={"#888"} size={50} />
+                <View style={sizeAdjustedStyles.imgWrapper}>
+                  <Icon
+                    name="cellphone-arrow-down"
+                    color={"#888"}
+                    size={iconSize}
+                  />
                 </View>
               </View>
             </TouchableHighlight>
           </View>
         </View>
-        <View style={styles.credit}>
-          <Text style={styles.creditText}>
+        <View style={sizeAdjustedStyles.credit}>
+          <Text style={sizeAdjustedStyles.creditText}>
             Violent Hobo Enterprises - {new Date().getFullYear()}
           </Text>
         </View>

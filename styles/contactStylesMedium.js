@@ -9,16 +9,16 @@ export default {
   contactWrapper: {
     position: "absolute",
     backgroundColor: "#fff",
-    height: "85%",
-    width: "90%",
+    height: "80%",
+    width: "80%",
     marginLeft: 20,
     marginRight: 20,
-    marginTop: 30,
-    padding: 20,
+    marginTop: 100,
+    padding: 45,
     borderWidth: 1,
     borderRadius: 20,
     borderColor: "#ddd",
-    elevation: 10
+    elevation: 5
   },
   touchableWrapper: {
     flex: 1,
@@ -45,7 +45,7 @@ export default {
   },
   text: {
     color: "#111",
-    fontSize: 20
+    fontSize: 30
   },
   imgWrapper: {
     justifyContent: "center",

@@ -5,14 +5,21 @@ import {
   View,
   TouchableHighlight,
   ScrollView,
-  Alert
+  Alert,
+  Dimensions
 } from "react-native";
 import styles from "../styles/validatedTipStyles";
+import stylesLarge from "../styles/validatedTipStylesLarge";
 import { calculateTip, setSelectedIndex } from "../actions";
 
+function getSize() {
+  return Dimensions.get("window").width > 650 ? stylesLarge : styles;
+}
+
 function IsOptional(value) {
+  const sizeAdjustedStyles = getSize();
   return value.country.tips[value.country.selectedTipIndex].optional ? (
-    <Text style={styles.optional}>Tipping optional</Text>
+    <Text style={sizeAdjustedStyles.optional}>Tipping optional</Text>
   ) : null;
 }
 
@@ -28,19 +35,21 @@ class ValidatedTip extends Component {
     }
     return true;
   }
-
+  // getSize = () => {
+  //   return Dimensions.get("window").width > 650 ? stylesLarge : styles;
+  // };
   render() {
     const { name, tips, selectedTipIndex, currency } = this.props.country;
-
+    const sizeAdjustedStyles = getSize();
     let tipButtons =
       tips.length <= 1
         ? null
         : tips.map((item, i) => {
-            let useThisButtonStyle = styles.tipType;
-            let useThisTextStyle = styles.tipButtonText;
+            let useThisButtonStyle = sizeAdjustedStyles.tipType;
+            let useThisTextStyle = sizeAdjustedStyles.tipButtonText;
             if (i === selectedTipIndex) {
-              useThisButtonStyle = styles.selectedTipType;
-              useThisTextStyle = styles.selectedTipButtonText;
+              useThisButtonStyle = sizeAdjustedStyles.selectedTipType;
+              useThisTextStyle = sizeAdjustedStyles.selectedTipButtonText;
             }
             return (
               <View key={i}>
@@ -59,28 +68,30 @@ class ValidatedTip extends Component {
     switch (this.props.err) {
       case "NOT_A_NUMBER":
         return (
-          <View style={styles.textWrapper}>
-            <Text style={styles.errorText}>Only use numbers.</Text>
+          <View style={sizeAdjustedStyles.textWrapper}>
+            <Text style={sizeAdjustedStyles.errorText}>Only use numbers.</Text>
           </View>
         );
       case "NEGATIVE":
         return (
-          <View style={styles.textWrapper}>
-            <Text style={styles.errorText}>Don't use negative numbers.</Text>
+          <View style={sizeAdjustedStyles.textWrapper}>
+            <Text style={sizeAdjustedStyles.errorText}>
+              Don't use negative numbers.
+            </Text>
           </View>
         );
       case null:
         if (tips.length === 1 && tips[selectedTipIndex] !== null) {
           return (
             <View>
-              <View style={styles.tipExtras}>
-                <Text style={styles.percentage}>
+              <View style={sizeAdjustedStyles.tipExtras}>
+                <Text style={sizeAdjustedStyles.percentage}>
                   Tip: {tips[selectedTipIndex].percentage * 100}%
                 </Text>
                 <IsOptional country={this.props.country} />
               </View>
-              <View style={styles.tipWrapper}>
-                <Text style={styles.text}>
+              <View style={sizeAdjustedStyles.tipWrapper}>
+                <Text style={sizeAdjustedStyles.text}>
                   {currency}
                   {this.props.amount}
                 </Text>
@@ -90,17 +101,17 @@ class ValidatedTip extends Component {
         } else if (tips.length > 1) {
           return (
             <View>
-              <View style={styles.tipButtonWrapper}>
+              <View style={sizeAdjustedStyles.tipButtonWrapper}>
                 <ScrollView horizontal={true}>{tipButtons}</ScrollView>
               </View>
-              <View style={styles.tipExtras}>
-                <Text style={styles.percentage}>
+              <View style={sizeAdjustedStyles.tipExtras}>
+                <Text style={sizeAdjustedStyles.percentage}>
                   Tip: {tips[selectedTipIndex].percentage * 100}%
                 </Text>
                 <IsOptional country={this.props.country} />
               </View>
-              <View style={styles.tipWrapper}>
-                <Text style={styles.text}>
+              <View style={sizeAdjustedStyles.tipWrapper}>
+                <Text style={sizeAdjustedStyles.text}>
                   {currency}
                   {this.props.amount}
                 </Text>
@@ -114,19 +125,25 @@ class ValidatedTip extends Component {
           name === "Iceland"
         ) {
           return (
-            <View style={styles.textWrapper}>
-              <Text style={styles.text}>Do not tip in {name}.</Text>
+            <View style={sizeAdjustedStyles.textWrapper}>
+              <Text style={sizeAdjustedStyles.text}>Do not tip in {name}.</Text>
             </View>
           );
         } else {
           return (
-            <View style={styles.textWrapper}>
-              <Text style={styles.text}>You don't need to tip in {name}.</Text>
+            <View style={sizeAdjustedStyles.textWrapper}>
+              <Text style={sizeAdjustedStyles.text}>
+                You don't need to tip in {name}.
+              </Text>
             </View>
           );
         }
       default:
-        return <Text style={styles.errorText}>Something went wrong...</Text>;
+        return (
+          <Text style={sizeAdjustedStyles.errorText}>
+            Something went wrong...
+          </Text>
+        );
     }
   }
 }

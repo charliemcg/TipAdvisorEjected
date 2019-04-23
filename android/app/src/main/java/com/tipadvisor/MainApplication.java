@@ -1,4 +1,4 @@
-package com.tipadvisorejected;
+package com.tipadvisor;
 
 import android.app.Application;
 
