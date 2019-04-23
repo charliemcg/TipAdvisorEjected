@@ -67,6 +67,11 @@ class Home extends Component {
   shouldComponentUpdate(nextProps, nextState) {
     //Detecting if country has changed
     if (nextProps.country.name !== this.props.country.name) {
+      //Reset error when changing country
+      if (this.props.err !== null) {
+        this.props.setError(null);
+        return true;
+      }
       let prefixRemovedValue = this.state.inputValue;
       //Checking if currency symbol needs to be removed
       if (prefixRemovedValue !== null && isNaN(prefixRemovedValue)) {

@@ -23,6 +23,22 @@ function IsOptional(value) {
   ) : null;
 }
 
+function checkName(name) {
+  switch (name) {
+    case "Congo, D.R.":
+      return "D.R. Congo";
+    case "Gambia, The":
+      return "The Gambia";
+    case "Korea, North":
+      return "North Korea";
+    case "Korea, South":
+      return "South Korea";
+    case "Sudan, South":
+      return "South Sudan";
+  }
+  return name;
+}
+
 class ValidatedTip extends Component {
   // This method looks screwy. Check the performance
   shouldComponentUpdate(nextProps, nextState) {
@@ -35,9 +51,6 @@ class ValidatedTip extends Component {
     }
     return true;
   }
-  // getSize = () => {
-  //   return Dimensions.get("window").width > 650 ? stylesLarge : styles;
-  // };
   render() {
     const { name, tips, selectedTipIndex, currency } = this.props.country;
     const sizeAdjustedStyles = getSize();
@@ -120,20 +133,22 @@ class ValidatedTip extends Component {
           );
         } else if (
           name === "Japan" ||
-          name === "South Korea" ||
+          name === "Korea, South" ||
           name === "Georgia" ||
           name === "Iceland"
         ) {
           return (
             <View style={sizeAdjustedStyles.textWrapper}>
-              <Text style={sizeAdjustedStyles.text}>Do not tip in {name}.</Text>
+              <Text style={sizeAdjustedStyles.text}>
+                Do not tip in {checkName(name)}.
+              </Text>
             </View>
           );
         } else {
           return (
             <View style={sizeAdjustedStyles.textWrapper}>
               <Text style={sizeAdjustedStyles.text}>
-                You don't need to tip in {name}.
+                You don't need to tip in {checkName(name)}.
               </Text>
             </View>
           );
