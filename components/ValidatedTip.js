@@ -23,6 +23,19 @@ function IsOptional(value) {
   ) : null;
 }
 
+function CheckForZeroTip(props) {
+  const sizeAdjustedStyles = getSize();
+  if (props.tipAmount === 0) {
+    return <Text style={sizeAdjustedStyles.text}>No need to tip.</Text>;
+  }
+  return (
+    <Text style={sizeAdjustedStyles.text}>
+      {props.currency}
+      {props.amount}
+    </Text>
+  );
+}
+
 function checkName(name) {
   switch (name) {
     case "Congo, D.R.":
@@ -124,10 +137,18 @@ class ValidatedTip extends Component {
                 <IsOptional country={this.props.country} />
               </View>
               <View style={sizeAdjustedStyles.tipWrapper}>
-                <Text style={sizeAdjustedStyles.text}>
-                  {currency}
-                  {this.props.amount}
-                </Text>
+                {/* <Text style={sizeAdjustedStyles.text}> */}
+                <CheckForZeroTip
+                  currency={currency}
+                  tipAmount={
+                    this.props.country.tips[this.props.country.selectedTipIndex]
+                      .percentage
+                  }
+                  amount={this.props.amount}
+                />
+                {/* {currency}
+                  {this.props.amount} */}
+                {/* </Text> */}
               </View>
             </View>
           );
