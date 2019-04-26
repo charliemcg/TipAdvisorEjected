@@ -58,6 +58,9 @@ class Home extends Component {
             this.props.changeCountry(countries[i].name);
           }
         }
+        if (this.props.country.name === null) {
+          this.props.changeCountry(countries[0].name);
+        }
       }
     } catch (e) {
       console.error(e);

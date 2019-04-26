@@ -16,8 +16,7 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import Title from "./Title";
 
 const EMAIL = "violenthoboenterprises@gmail.com";
-const REVIEW =
-  "https://play.google.com/store/apps/details?id=com.violenthoboenterprises.tipadvisor"; //Need to get the link for both ios and android
+const REVIEW = "https://play.google.com/store/apps/details?id=com.tipadvisor"; //Need to get the link for both ios and android
 const MORE_APPS =
   "https://play.google.com/store/apps/developer?id=ViolentHoboEnterprises";
 
