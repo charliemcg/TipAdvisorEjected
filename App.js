@@ -11,11 +11,11 @@ import { createBottomTabNavigator, createAppContainer } from "react-navigation";
 const MyStatusBar = ({ backgroundColor, ...props }) => (
   <View
     style={{
-      backgroundColor: "#338a3e",
+      // backgroundColor: "#338a3e",
       height: Platform.OS === "ios" ? 0 : StatusBar.currentHeight
     }}
   >
-    <StatusBar translucent backgroundColor={backgroundColor} {...props} />
+    <StatusBar translucent backgroundColor="#022d1a" {...props} />
   </View>
 );
 

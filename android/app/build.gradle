@@ -91,9 +91,13 @@ def enableSeparateBuildPerCPUArchitecture = false
 /**
  * Run Proguard to shrink the Java bytecode in release builds.
  */
-//def enableProguardInReleaseBuilds = true
+def enableProguardInReleaseBuilds = true
 
 android {
+    /**
+     * Check this link to help with release builds crashing
+     * https://github.com/facebook/react-native/issues/22046
+     */
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     compileOptions {
@@ -105,8 +109,8 @@ android {
         applicationId "com.tipadvisor"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 5
-        versionName "1.4"
+        versionCode 7
+        versionName "1.6"
     }
     splits {
         abi {
@@ -121,8 +125,8 @@ android {
             /**
              * Disabling Proguard in an attempt to avoid crashes when downloading from app store
              */
-//            minifyEnabled enableProguardInReleaseBuilds
-//            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            minifyEnabled enableProguardInReleaseBuilds
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
     // applicationVariants are e.g. debug, release
