@@ -54,6 +54,24 @@ class Contact extends Component {
     return (
       <View style={sizeAdjustedStyles.container}>
         <Title />
+        <TouchableHighlight 
+          onPress={() => this.props.navigation.navigate("PrivacyPolicy")}
+          style={{
+            position: 'absolute',
+            top: "7%",
+            right: "4%",
+            padding: 3
+          }}
+          underlayColor="#022d1a">
+            <Text
+              style={{
+                color: '#fff',
+                fontWeight: 'bold'
+              }}
+            >
+              Privacy
+            </Text>
+        </TouchableHighlight>
         <View style={sizeAdjustedStyles.contactWrapper}>
           <View style={sizeAdjustedStyles.touchableWrapper}>
             <TouchableHighlight

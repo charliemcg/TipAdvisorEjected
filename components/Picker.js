@@ -45,6 +45,7 @@ class CountryPicker extends Component {
                     justifyContent: "center"
                   }}
                   selectTextStyle={{fontSize: 20}}
+                  optionTextStyle={{color: "#338a3e"}}
                   />
     );
   }

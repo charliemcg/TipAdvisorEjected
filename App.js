@@ -5,8 +5,9 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import PrivacyPolicy from "./components/PrivacyPolicy"
 import store from "./store";
-import { createBottomTabNavigator, createAppContainer } from "react-navigation";
+import { createBottomTabNavigator, createStackNavigator, createAppContainer } from "react-navigation";
 
 const MyStatusBar = ({ backgroundColor, ...props }) => (
   <View
@@ -18,6 +19,23 @@ const MyStatusBar = ({ backgroundColor, ...props }) => (
     <StatusBar barStyle="light-content" translucent backgroundColor="#022d1a" {...props} />
   </View>
 );
+
+const ContactNavigator = createStackNavigator(
+  {
+    Contact: {
+      screen: Contact,
+      navigationOptions: {
+        header: null
+      }
+    },
+    PrivacyPolicy: {
+      screen: PrivacyPolicy,
+      navigationOptions: {
+        headerTintColor: "#338a3e"
+      }
+    }
+  }
+)
 
 const Navigator = createBottomTabNavigator(
   {
@@ -38,7 +56,8 @@ const Navigator = createBottomTabNavigator(
       }
     },
     Contact: {
-      screen: Contact,
+      // screen: Contact,
+      screen: ContactNavigator,
       navigationOptions: {
         tabBarIcon: ({ tintColor }) => (
           <Icon name="email-outline" color={tintColor} size={20} />
