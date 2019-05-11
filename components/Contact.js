@@ -6,7 +6,8 @@ import {
   TouchableHighlight,
   Linking,
   Alert,
-  Dimensions
+  Dimensions,
+  Platform
 } from "react-native";
 import styles from "../styles/contactStyles";
 import stylesLarge from "../styles/contactStylesLarge";
@@ -16,8 +17,8 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import Title from "./Title";
 
 const EMAIL = "violenthoboenterprises@gmail.com";
-const REVIEW = "https://play.google.com/store/apps/details?id=com.tipadvisor"; //Need to get the link for both ios and android
-const MORE_APPS =
+const REVIEW = Platform.OS === "ios" ? "" : "https://play.google.com/store/apps/details?id=com.tipadvisor"; //Need to get the link for both ios and android
+const MORE_APPS = Platform.OS === "ios" ? "" : 
   "https://play.google.com/store/apps/developer?id=ViolentHoboEnterprises";
 
 class Contact extends Component {

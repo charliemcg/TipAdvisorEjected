@@ -15,7 +15,7 @@ export default {
     borderColor: "#ddd",
     marginLeft: 20,
     marginRight: 20,
-    marginTop: 30,
+    marginTop: 100,
     elevation: 20
   },
   text: {
