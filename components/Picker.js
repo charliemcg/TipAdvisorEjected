@@ -36,7 +36,16 @@ class CountryPicker extends Component {
       <ModalSelector
                   data={pickerItems}
                   initValue={this.props.country.name}
-                  onChange={value => this.handleChange(value.label)}/>
+                  onChange={value => this.handleChange(value.label)}
+                  style={{
+                    height: "100%",
+                    width: "100%"}}
+                  selectStyle={{
+                    height: "100%",
+                    justifyContent: "center"
+                  }}
+                  selectTextStyle={{fontSize: 20}}
+                  />
     );
   }
 }
