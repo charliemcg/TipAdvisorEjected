@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Provider } from "react-redux";
-import { Platform, StatusBar, View, Text } from "react-native";
+import { Platform, StatusBar, View, Text, Alert } from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -12,7 +12,6 @@ import { createBottomTabNavigator, createStackNavigator, createAppContainer } fr
 const MyStatusBar = ({ backgroundColor, ...props }) => (
   <View
     style={{
-      // backgroundColor: "#338a3e",
       height: Platform.OS === "ios" ? 0 : StatusBar.currentHeight
     }}
   >
@@ -31,11 +30,25 @@ const ContactNavigator = createStackNavigator(
     PrivacyPolicy: {
       screen: PrivacyPolicy,
       navigationOptions: {
-        headerTintColor: "#338a3e"
+        headerTintColor: "#ddd",
+        headerStyle: {
+          backgroundColor: "#022d1a"
+        },
       }
     }
   }
 )
+
+ContactNavigator.navigationOptions = ({ navigation }) => {
+  let tabBarVisible = true;
+  if (navigation.state.index > 0) {
+    tabBarVisible = false;
+  }
+
+  return {
+    tabBarVisible,
+  };
+};
 
 const Navigator = createBottomTabNavigator(
   {

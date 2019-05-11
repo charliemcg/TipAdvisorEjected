@@ -22,6 +22,14 @@ const MORE_APPS = Platform.OS === "ios" ? "" :
   "https://play.google.com/store/apps/developer?id=ViolentHoboEnterprises";
 
 class Contact extends Component {
+  static navigationOptions = ({ navigation }) => {
+    // const {routeName} = navigation.state.routes[navigation.state.index]
+    // let navigationOptions = {};
+    // if(routeName === 'PrivacyPolicy'){
+    //   navigationOptions.tabBarVisible = false
+    // }
+    // return navigationOptions
+  };
   handleReview = () => {
     // inform user of error
     Linking.openURL(REVIEW).catch(err =>
