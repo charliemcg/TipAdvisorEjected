@@ -30,6 +30,7 @@ const ContactNavigator = createStackNavigator(
     PrivacyPolicy: {
       screen: PrivacyPolicy,
       navigationOptions: {
+        title: "Privacy Policy",
         headerTintColor: "#ddd",
         headerStyle: {
           backgroundColor: "#022d1a"
