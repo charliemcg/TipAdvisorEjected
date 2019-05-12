@@ -57,16 +57,11 @@ class Contact extends Component {
         <Title />
         <TouchableHighlight 
           onPress={() => this.props.navigation.navigate("PrivacyPolicy")}
-          style={{
-            position: 'absolute',
-            top: "5%",
-            right: "4%",
-            padding: 3
-          }}
+          style={sizeAdjustedStyles.privacy}
           underlayColor="#022d1a">
             <Text
               style={{
-                color: '#fff',
+                color: '#111',
                 fontWeight: 'bold'
               }}
             >

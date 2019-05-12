@@ -6,6 +6,17 @@ export default {
     // justifyContent: "space-between",
     // alignItems: "center"
   },
+  privacy: {
+    position: 'absolute',
+    top: "5%",
+    right: "4%",
+    paddingTop: 3,
+    paddingBottom: 3,
+    paddingLeft: 5,
+    paddingRight: 5,
+    backgroundColor: '#eee',
+    borderRadius: 15
+  },
   contactWrapper: {
     position: "absolute",
     backgroundColor: "#fff",

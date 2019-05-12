@@ -179,7 +179,7 @@ class Home extends Component {
       );
 
     //use flat instead of shiny for ios
-    const flagImgUrl =
+    const flagImgUrl = 
       "https://www.countryflags.io/" +
       this.props.country.flag +
       "/shiny/64.png";
