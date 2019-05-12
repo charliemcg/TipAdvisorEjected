@@ -4,7 +4,7 @@ export default {
     height: "100%",
     backgroundColor: "#eee",
     justifyContent: "space-between",
-    alignItems: "center"
+    alignItems: "center",
   },
   descriptionWrapper: {
     position: "absolute",
@@ -13,9 +13,9 @@ export default {
     borderWidth: 1,
     borderRadius: 20,
     borderColor: "#ddd",
-    marginLeft: 20,
-    marginRight: 20,
-    marginTop: 100,
+    marginLeft: "5%",
+    marginRight: "5%",
+    marginTop: "20%",
     elevation: 20
   },
   text: {
@@ -23,6 +23,6 @@ export default {
     fontSize: 15,
     color: "#111",
     padding: 20,
-    paddingBottom: 40
+    paddingBottom: "15%"
   }
 };

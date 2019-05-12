@@ -22,14 +22,6 @@ const MORE_APPS = Platform.OS === "ios" ? "" :
   "https://play.google.com/store/apps/developer?id=ViolentHoboEnterprises";
 
 class Contact extends Component {
-  static navigationOptions = ({ navigation }) => {
-    // const {routeName} = navigation.state.routes[navigation.state.index]
-    // let navigationOptions = {};
-    // if(routeName === 'PrivacyPolicy'){
-    //   navigationOptions.tabBarVisible = false
-    // }
-    // return navigationOptions
-  };
   handleReview = () => {
     // inform user of error
     Linking.openURL(REVIEW).catch(err =>
@@ -57,7 +49,8 @@ class Contact extends Component {
     return Dimensions.get("window").width > 650 ? 80 : 50;
   };
   render() {
-    const sizeAdjustedStyles = this.getSize();
+    // const sizeAdjustedStyles = this.getSize();
+    const sizeAdjustedStyles = styles
     const iconSize = this.getIconSize();
     return (
       <View style={sizeAdjustedStyles.container}>
@@ -66,7 +59,7 @@ class Contact extends Component {
           onPress={() => this.props.navigation.navigate("PrivacyPolicy")}
           style={{
             position: 'absolute',
-            top: "7%",
+            top: "5%",
             right: "4%",
             padding: 3
           }}

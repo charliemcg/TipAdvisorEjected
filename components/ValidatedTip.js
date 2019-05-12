@@ -66,7 +66,8 @@ class ValidatedTip extends Component {
   }
   render() {
     const { name, tips, selectedTipIndex, currency } = this.props.country;
-    const sizeAdjustedStyles = getSize();
+    // const sizeAdjustedStyles = getSize();
+    const sizeAdjustedStyles = styles
     let tipButtons =
       tips.length <= 1
         ? null

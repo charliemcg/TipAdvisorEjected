@@ -22,7 +22,8 @@ class About extends Component {
       : stylesLarge;
   };
   render() {
-    const sizeAdjustedStyles = this.getSize();
+    // const sizeAdjustedStyles = this.getSize();
+    const sizeAdjustedStyles = styles
     return (
       <View style={sizeAdjustedStyles.container}>
         <Title />

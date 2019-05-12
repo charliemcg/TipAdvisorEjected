@@ -114,7 +114,8 @@ class Home extends Component {
       : stylesLarge;
   };
   render() {
-    const sizeAdjustedStyles = this.getSize();
+    // const sizeAdjustedStyles = this.getSize();
+    const sizeAdjustedStyles = styles
     const getTextInput =
       this.props.country.tips[this.props.country.selectedTipIndex] ===
       null ? null : (

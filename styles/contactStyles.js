@@ -3,30 +3,33 @@ export default {
     width: "100%",
     height: "100%",
     backgroundColor: "#eee",
-    justifyContent: "space-between",
-    alignItems: "center"
+    // justifyContent: "space-between",
+    // alignItems: "center"
   },
   contactWrapper: {
     position: "absolute",
     backgroundColor: "#fff",
     height: "75%",
     width: "90%",
-    marginLeft: 20,
-    marginRight: 20,
-    marginTop: 100,
-    padding: 20,
+    marginLeft: "5%",
+    marginRight: "5%",
+    // marginTop: "23%",
+    top: "15%",
+    padding: "8%",
     borderWidth: 1,
     borderRadius: 20,
     borderColor: "#ddd",
-    elevation: 10
+    elevation: 10,
+    justifyContent: "space-between"
   },
   touchableWrapper: {
-    flex: 1,
-    marginTop: 30,
-    marginBottom: 10,
+    // flex: 1,
+    // marginTop: 10,
+    // marginBottom: 10,
     borderStyle: "solid",
     backgroundColor: "#fff",
-    justifyContent: "center",
+    // justifyContent: "center",
+    height: "30%",
     borderWidth: 1,
     borderRadius: 20,
     borderColor: "#ddd",
@@ -51,13 +54,10 @@ export default {
     width: "40%",
     alignItems: "center"
   },
-  // img: {
-  //   width: 50,
-  //   height: 50
-  // },
   credit: {
+    position: "absolute",
     height: "10%",
-    marginTop: 40,
+    bottom: "0%",
     justifyContent: "center",
     width: "100%"
   },

@@ -1,6 +1,6 @@
 export default {
   titleWrapper: {
-    height: 150,
+    height: "28%",
     justifyContent: "space-between",
     alignItems: "center"
   },

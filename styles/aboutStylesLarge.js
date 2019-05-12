@@ -4,7 +4,7 @@ export default {
     height: "100%",
     backgroundColor: "#eee",
     justifyContent: "space-between",
-    alignItems: "center"
+    alignItems: "center",
   },
   descriptionWrapper: {
     position: "absolute",

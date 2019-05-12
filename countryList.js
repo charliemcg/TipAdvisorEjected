@@ -1325,13 +1325,13 @@ export const countries = [
     selectedTipIndex: 0,
     currency: "£"
   },
-  // {
-  //   name: "United States of America",
-  //   flag: "US",
-  //   tips: [{ percentage: 0.15, optional: false }],
-  //   selectedTipIndex: 0,
-  //   currency: "$"
-  // },
+  {
+    name: "United States of America",
+    flag: "US",
+    tips: [{ percentage: 0.15, optional: false }],
+    selectedTipIndex: 0,
+    currency: "$"
+  },
   {
     name: "Uruguay",
     flag: "UY",
